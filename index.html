@@ -1,0 +1,2014 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>24-Week Hybrid No-Code + AI Roadmap — From Zero to Expert</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Tailwind CSS (CDN build) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#6d28d9', /* purple */
+skyblue: '#0ea5e9',
+mint: '#10b981',
+deep: '#1e293b'
+},
+fontFamily: {
+sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+}
+}
+}
+}
+</script>
+<style>
+/* Inline tweaks */
+html { scroll-behavior: smooth; }
+body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+/* Card hover effect */
+.card-hover { transition: transform .18s cubic-bezier(.2,.9,.2,1), box-shadow .18s ease; }
+.card-hover:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(16,24,40,0.08); }
+/* Active nav item */
+.nav-active { color: #6d28d9; font-weight: 700; }
+/* Mobile menu animation */
+.slide-down { animation: slideDown .18s ease forwards; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-6px) } to { opacity: 1; transform: none } }
+/* Details chevron rotation */
+details summary::-webkit-details-marker { display: none; }
+details summary { list-style: none; }
+.chev { transition: transform .2s ease; }
+details[open] .chev { transform: rotate(180deg); }
+/* Small screens adjustments */
+@media (max-width: 639px) {
+.hide-sm { display: none; }
+}
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+<!-- Header / Navigation -->
+<header id="header" class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur border-b border-slate-200">
+<div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+<a href="#hero" class="flex items-center gap-3">
+<span class="text-2xl text-primary"><i class="fa-solid fa-brain"></i></span>
+<span class="text-lg font-extrabold text-primary">Hybrid No-Code + AI Roadmap</span>
+</a>
+<!-- Desktop nav -->
+  <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+    <a href="#overview" class="nav-link hover:text-primary">Overview</a>
+    <a href="#skills" class="nav-link hover:text-primary">Skills</a>
+    <a href="#roadmap" class="nav-link hover:text-primary">Roadmap</a>
+    <a href="#monetization" class="nav-link hover:text-primary">Monetization</a>
+    <a href="#scaling" class="nav-link hover:text-primary">Scaling</a>
+  </nav>
+
+  <!-- Mobile menu button -->
+  <div class="md:hidden">
+    <button id="menu-btn" aria-label="Toggle menu" class="p-2 rounded-md hover:bg-slate-100">
+      <i class="fa-solid fa-bars text-lg text-slate-700"></i>
+    </button>
+  </div>
+</div>
+
+<!-- Mobile nav -->
+<div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white/95">
+  <div class="px-4 py-4 flex flex-col gap-3">
+    <a href="#overview" class="nav-link text-slate-700">Overview</a>
+    <a href="#skills" class="nav-link text-slate-700">Skills</a>
+    <a href="#roadmap" class="nav-link text-slate-700">Roadmap</a>
+    <a href="#monetization" class="nav-link text-slate-700">Monetization</a>
+    <a href="#scaling" class="nav-link text-slate-700">Scaling</a>
+  </div>
+</div>
+</header>
+<main class="pt-20">
+<!-- HERO -->
+<section id="hero" class="min-h-[60vh] flex items-center">
+  <div class="w-full">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <div class="rounded-2xl overflow-hidden relative bg-gradient-to-r from-purple-600 to-blue-500 text-white shadow-2xl p-10">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+        <div class="relative z-10 grid gap-6 md:grid-cols-2 items-center">
+          <div>
+            <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">The 24-Week Hybrid No-Code + AI Engineer Roadmap</h1>
+            <p class="mt-3 text-indigo-100">From Visual Development to Building Intelligent Systems. Your complete guide to a high-impact, remote-friendly career.</p>
+
+            <div class="mt-6 flex gap-3 flex-wrap">
+              <div class="bg-white/10 px-4 py-3 rounded-lg">
+                <div class="text-sm uppercase text-indigo-100">Duration</div>
+                <div class="text-xl font-bold">6+ Months</div>
+              </div>
+              <div class="bg-white/10 px-4 py-3 rounded-lg">
+                <div class="text-sm uppercase text-indigo-100">Effort</div>
+                <div class="text-xl font-bold">20 hours/week</div>
+              </div>
+              <div class="bg-white/10 px-4 py-3 rounded-lg">
+                <div class="text-sm uppercase text-indigo-100">Goal</div>
+                <div class="text-xl font-bold">$10K+ / Month</div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex gap-3">
+              <a href="#roadmap" class="inline-flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-lg font-semibold shadow hover:shadow-lg">
+                <i class="fa-solid fa-play"></i> Start the Roadmap
+              </a>
+              <a href="#monetization" class="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-lg hover:bg-white/30">
+                <i class="fa-solid fa-money-bill"></i> See Career Path
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <!-- Illustration / cards -->
+            <div class="grid grid-cols-1 gap-4">
+              <div class="bg-white/10 p-4 rounded-xl">
+                <div class="text-xs text-indigo-100">Phase 1: No-Code Mastery</div>
+                <div class="text-white font-semibold">Weeks 1-8: Build professional websites & apps visually.</div>
+              </div>
+
+              <div class="bg-white/10 p-4 rounded-xl">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="text-xs text-indigo-100">Phase 2: The AI Bridge</div>
+                    <div class="text-white font-semibold">Weeks 9-16: Learn Python & connect AI to your builds.</div>
+                  </div>
+                  <div class="text-white/80 text-sm">Unlock automation</div>
+                </div>
+              </div>
+
+              <div class="bg-white/10 p-4 rounded-xl">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="text-xs text-indigo-100">Phase 3: AI Specialization</div>
+                    <div class="text-white font-semibold">Weeks 17-24+: Build custom AI agents & intelligent systems.</div>
+                  </div>
+                  <div class="text-white/80 text-sm">Become an expert</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- grid -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview" class="py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold">Roadmap Overview</h2>
+      <p class="mt-2 text-slate-600">A six-month journey broken into three core phases, transforming you from a beginner into a job-ready Hybrid Developer.</p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      <!-- Phase 1 -->
+      <div class="bg-white rounded-xl p-6 card-hover border shadow-sm">
+        <div class="flex items-center gap-3">
+          <div class="rounded-md bg-purple-50 p-3 text-purple-600"><i class="fa-solid fa-layer-group"></i></div>
+          <div>
+            <h3 class="font-semibold">Phase 1 — No-Code Foundation (Weeks 1-8)</h3>
+            <p class="text-sm text-slate-600 mt-1">Master visual development. Build stunning websites, powerful web apps, and foundational automations without writing code.</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="text-sm text-slate-500">Income Potential</div>
+          <div class="text-lg font-bold mt-1">$500 – $2,500 / Month</div>
+          <ul class="mt-3 text-sm text-slate-600 space-y-1">
+            <li>Core Outcome: Ability to build and launch commercial-grade websites and web applications for clients.</li>
+            <li>Freelance-ready after 4 weeks.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="bg-white rounded-xl p-6 card-hover border shadow-sm">
+        <div class="flex items-center gap-3">
+          <div class="rounded-md bg-blue-50 p-3 text-blue-600"><i class="fa-solid fa-code-branch"></i></div>
+          <div>
+            <h3 class="font-semibold">Phase 2 — The AI Bridge (Weeks 9-16)</h3>
+            <p class="text-sm text-slate-600 mt-1">Learn Python, the language of AI. Understand APIs, connect to Large Language Models (LLMs), and build AI-powered features.</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="text-sm text-slate-500">Income Potential</div>
+          <div class="text-lg font-bold mt-1">$2,500 – $6,000 / Month</div>
+          <ul class="mt-3 text-sm text-slate-600 space-y-1">
+            <li>Core Outcome: Create sophisticated automations and add AI features to no-code projects, offering high-value services.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="bg-white rounded-xl p-6 card-hover border shadow-sm">
+        <div class="flex items-center gap-3">
+          <div class="rounded-md bg-green-50 p-3 text-green-600"><i class="fa-solid fa-microchip"></i></div>
+          <div>
+            <h3 class="font-semibold">Phase 3 — AI Engineering (Weeks 17-24+)</h3>
+            <p class="text-sm text-slate-600 mt-1">Dive deep into AI development. Master LangChain, build RAG chatbots, create autonomous agents, and understand the MCP.</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="text-sm text-slate-500">Income Potential</div>
+          <div class="text-lg font-bold mt-1">$6,000 – $12,000+ / Month</div>
+          <ul class="mt-3 text-sm text-slate-600 space-y-1">
+            <li>Core Outcome: Qualify for AI Engineer & Automation Specialist roles. Build and sell custom, intelligent business solutions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE SKILLS & TOOLS -->
+<section id="skills" class="py-12 bg-slate-50 border-t border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold">Core Skills & Tool Stack</h2>
+      <p class="mt-2 text-slate-600">The primary platforms and languages you will master on this journey.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-xl p-6 border shadow-sm">
+        <h3 class="font-semibold mb-3">Visual Development</h3>
+        <ul class="space-y-3 text-sm text-slate-700">
+          <li><strong>Figma:</strong> UI/UX design, wireframing, and prototyping.</li>
+          <li><strong>Webflow:</strong> Building pixel-perfect, responsive marketing websites.</li>
+          <li><strong>Bubble:</strong> Developing complex, data-driven web applications and MVPs.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border shadow-sm">
+        <h3 class="font-semibold mb-3">Automation & Integration</h3>
+        <ul class="space-y-3 text-sm text-slate-700">
+          <li><strong>n8n / Make:</strong> Creating multi-step automations and connecting APIs.</li>
+          <li><strong>Airtable:</strong> Flexible databases for CMS and backend logic.</li>
+          <li><strong>Webhooks & APIs:</strong> The fundamental glue of the modern web.</li>
+        </ul>
+      </div>
+      
+      <div class="bg-white rounded-xl p-6 border shadow-sm">
+        <h3 class="font-semibold mb-3">Programming & AI</h3>
+        <ul class="space-y-3 text-sm text-slate-700">
+            <li><strong>Python:</strong> Core programming for AI, scripting, and backend tasks.</li>
+            <li><strong>JavaScript:</strong> Basic understanding for front-end customization.</li>
+            <li><strong>OpenAI / Claude APIs:</strong> Integrating LLMs like GPT-4 into applications.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border shadow-sm">
+        <h3 class="font-semibold mb-3">Advanced AI Engineering</h3>
+        <ul class="space-y-3 text-sm text-slate-700">
+          <li><strong>LangChain:</strong> Framework for building context-aware AI applications.</li>
+          <li><strong>Vector Databases:</strong> (e.g., Pinecone) For RAG and long-term memory.</li>
+          <li><strong>MCP (Model Context Protocol):</strong> Advanced agent-based development.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LEARNING PATH -->
+<section id="learning-path" class="py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-6 text-center">
+      <h2 class="text-2xl font-bold">A Bird's-Eye View: The Learning Path</h2>
+      <p class="mt-2 text-slate-600">From visual design to autonomous AI agents, this is your high-level journey.</p>
+    </div>
+    <div class="bg-white rounded-xl p-6 border shadow-sm">
+      <ol class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm md:text-base text-slate-700 font-semibold">
+        <li class="bg-purple-50 text-purple-700 px-3 py-1 rounded-md">Figma</li>
+        <li class="text-slate-400 font-normal">&rarr;</li>
+        <li class="bg-purple-50 text-purple-700 px-3 py-1 rounded-md">Webflow</li>
+        <li class="text-slate-400 font-normal">&rarr;</li>
+        <li class="bg-purple-50 text-purple-700 px-3 py-1 rounded-md">Bubble</li>
+        <li class="text-slate-400 font-normal">&rarr;</li>
+        <li class="bg-blue-50 text-blue-700 px-3 py-1 rounded-md">Python</li>
+        <li class="text-slate-400 font-normal">&rarr;</li>
+        <li class="bg-blue-50 text-blue-700 px-3 py-1 rounded-md">n8n</li>
+        <li class="text-slate-400 font-normal">&rarr;</li>
+        <li class="bg-blue-50 text-blue-700 px-3 py-1 rounded-md">APIs</li>
+        <li class="text-slate-400 font-normal">&rarr;</li>
+        <li class="bg-green-50 text-green-700 px-3 py-1 rounded-md">LangChain</li>
+        <li class="text-slate-400 font-normal">&rarr;</li>
+        <li class="bg-green-50 text-green-700 px-3 py-1 rounded-md">AI Agents</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKLY ROADMAP - DETAILED -->
+<section id="roadmap" class="py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="mb-8 text-center">
+      <h2 class="text-3xl font-extrabold">The Detailed 24-Week Roadmap</h2>
+      <p class="mt-2 text-slate-600 max-w-3xl mx-auto">Follow this granular, hour-by-hour plan to build skills methodically. Each week is a 20-hour sprint (5 days, 4 hours/day).</p>
+    </div>
+	
+	<!-- Collapse All Button -->
+<div class="mb-4 text-right">
+    <button id="collapse-all-btn" class="px-4 py-2 text-sm font-semibold text-slate-600 bg-white border rounded-lg shadow-sm hover:bg-slate-50 hover:text-primary">
+        <i class="fa-solid fa-compress mr-2"></i>Collapse All
+    </button>
+</div>
+
+    <!-- PHASE 1 HEADING -->
+    <div class="my-10 text-center">
+        <h3 class="text-2xl font-bold text-primary">Phase 1: No-Code Foundation (Weeks 1-8)</h3>
+        <p class="mt-1 text-slate-500">Your goal is to become a proficient visual developer, capable of building and launching professional web assets.</p>
+    </div>
+    
+    <div class="space-y-3">
+      <!-- Week 1 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 1 — Design Fundamentals & Figma Mastery</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Understand the principles of good web design and gain proficiency in Figma by designing a complete, multi-page website wireframe.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Figma, UI/UX Principles (Layout, Typography, Color).</p>
+          <p class="mt-1"><strong>Source Material:</strong> `Complete Web Design from Figma to Webflow` - Modules 02-05. ~2h 20m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Layout & Hierarchy.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1:</strong> Watch Module 03 videos on Alignment, Grid, and Hierarchy.</li>
+                      <li><strong>Hour 2-3:</strong> Recreate the examples from the videos in Figma. Practice aligning elements and establishing clear visual hierarchy on a blank canvas.</li>
+                      <li><strong>Hour 4:</strong> Start the Weekly Project: Create the wireframe for the homepage hero section.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Typography.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 04 videos on Typeface Personality, Categories, and Setting Type.</li>
+                      <li><strong>Hour 3:</strong> Complete the "Typeface Pairing Practice" exercise. Find and pair two fonts for the weekly project.</li>
+                      <li><strong>Hour 4:</strong> Apply your chosen typography to the homepage wireframe.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Color & Imagery.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 05 videos on Sampling, Fine-tuning Colors, and Brand Colors.</li>
+                      <li><strong>Hour 3:</strong> Use a color palette generator to create a brand palette. Practice applying it to simple shapes in Figma.</li>
+                      <li><strong>Hour 4:</strong> Add color and placeholder images to the homepage wireframe.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Advanced Design & Other Pages.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1:</strong> Watch Module 06-07 videos on Image Overlays, Cropping, and Design Tricks.</li>
+                      <li><strong>Hour 2-3:</strong> Design the wireframes for the 'About' and 'Services' pages for the weekly project.</li>
+                      <li><strong>Hour 4:</strong> Create reusable components in Figma (buttons, navbars) for consistency.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Finalizing the Design.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Design the wireframe for the 'Contact' page, including a form layout.</li>
+                      <li><strong>Hour 3:</strong> Review all four pages for consistency in spacing, typography, and color.</li>
+                      <li><strong>Hour 4:</strong> Organize your Figma file with clear naming and grouping. Prepare it for handoff to development (which you'll do next week).</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "Innovate AI" Startup Website Design</h4>
+          <p class="mt-2"><strong>Goal:</strong> Design a complete 4-page website for a fictional AI consulting startup.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Define Structure:</strong> Plan four pages: Homepage, About Us, Services, and Contact.</li>
+            <li><strong>Wireframe Layouts:</strong> In Figma, create low-fidelity wireframes for each page, focusing on element placement (nav, hero, feature sections, footer).</li>
+            <li><strong>Develop a Style Guide:</strong> Choose a primary and secondary font. Define a color palette (2-3 main colors, plus neutrals). Create component styles for headings, paragraphs, and buttons.</li>
+            <li><strong>Build High-Fidelity Mockups:</strong> Apply your style guide to the wireframes, adding placeholder text (Lorem Ipsum) and stock images to create a polished, realistic design.</li>
+            <li><strong>Prototype Basic Interactions:</strong> Connect the pages using Figma's prototyping tool so that clicking a navigation link takes you to the correct page.</li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- Week 2 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 2 — Building Responsive Websites with Webflow</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Translate your Figma design from Week 1 into a fully functional, responsive, and live multi-page website using Webflow.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Webflow, HTML/CSS Concepts (Box Model, Flexbox), Responsive Design.</p>
+          <p class="mt-1"><strong>Source Material:</strong> `Complete Web Design from Figma to Webflow` - Modules 12-15. ~5h 10m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Webflow Basics & Homepage Build.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 12-13 videos on Webflow Designer, Box Model, Classes, and building the Navbar.</li>
+                      <li><strong>Hour 3-4:</strong> Begin the Weekly Project. Set up a new Webflow project and build the global navbar and the hero section of the homepage, translating your Figma design.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Flexbox & Homepage Sections.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1:</strong> Watch Module 13 videos on Flexbox. Complete the Flexbox Froggy game to solidify understanding.</li>
+                      <li><strong>Hour 2-3:</strong> Build the remaining sections of the homepage (feature grids, CTA) using Flexbox for alignment.</li>
+                      <li><strong>Hour 4:</strong> Build the global footer.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Building the Inner Pages.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Create the 'About' and 'Services' pages in Webflow. Reuse your global navbar and footer.</li>
+                      <li><strong>Hour 3-4:</strong> Build the content for these pages, focusing on reusing CSS classes you created for the homepage to maintain consistency.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Responsive Design.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 14 videos on Responsive Web Design.</li>
+                      <li><strong>Hour 2-4:</strong> Go through each page (Homepage, About, Services) and adjust the design for Tablet and Mobile breakpoints. Focus on stacking elements, adjusting font sizes, and using the mobile navigation menu.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Forms, SEO, and Launch.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1:</strong> Build the Contact page and style the Webflow form.</li>
+                      <li><strong>Hour 2:</strong> Watch Module 15 videos on SEO settings. Apply meta titles and descriptions to all pages.</li>
+                      <li><strong>Hour 3:</strong> Double-check all pages on all breakpoints. Test the form submission.</li>
+                      <li><strong>Hour 4:</strong> Publish your site to the free `.webflow.io` staging domain. Congratulations, your first site is live!</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: Launch the "Innovate AI" Startup Website</h4>
+          <p class="mt-2"><strong>Goal:</strong> Take the Figma design from last week and build it into a live, responsive website on Webflow.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Project Setup:</strong> Create a blank project in Webflow. Set up your global font styles and color swatches to match your Figma style guide.</li>
+            <li><strong>Build Page by Page:</strong> Start with the Homepage. Use divs, containers, and sections to structure your page. Apply classes for styling, mirroring your Figma design pixel-for-pixel. Use Flexbox heavily for layout control.</li>
+            <li><strong>Implement Other Pages:</strong> Build out the About, Services, and Contact pages, ensuring you reuse classes and maintain a consistent structure.</li>
+            <li><strong>Optimize for Responsiveness:</strong> Use Webflow's built-in breakpoints (Tablet, Mobile Landscape, Mobile Portrait) to adjust your design. Ensure the site is perfectly usable and looks great on all screen sizes.</li>
+            <li><strong>Publish:</strong> Configure basic on-page SEO settings (title tags, meta descriptions) and publish the website to its staging domain. You now have a live URL to share in your portfolio.</li>
+          </ol>
+        </div>
+      </details>
+      
+      <!-- Week 3 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 3 — Webflow CMS & Dynamic Content</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Master the Webflow CMS to build dynamic, data-driven websites. You will build a complete blog that can be updated without touching the designer.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Webflow CMS, Collection Lists, Collection Pages, Dynamic Content.</p>
+          <p class="mt-1"><strong>Source Material:</strong> `Complete Web Design from Figma to Webflow` - Module 21. ~1h 50m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: CMS Fundamentals.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 21 videos on Webflow CMS, creating Collections, and understanding CMS Items.</li>
+                      <li><strong>Hour 3-4:</strong> For the Weekly Project, create two CMS Collections: "Blog Posts" (with fields for Title, Image, Rich Text, Author) and "Authors" (with fields for Name, Bio, Picture). Populate them with 5-6 dummy posts and 2-3 authors.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Building the Blog Homepage.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1:</strong> Watch Module 21 videos on Collection Lists.</li>
+                      <li><strong>Hour 2-4:</strong> Design a new "Blog" page in Webflow. Add a Collection List and connect it to your "Blog Posts" collection. Design the layout of a single blog post card (image, title, author name) and watch it populate automatically.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Designing the Dynamic Post Page.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 21 videos on Collection Pages and linking dynamic content.</li>
+                      <li><strong>Hour 3-4:</strong> Open the purple "Blog Posts Template" page. Design the full layout for a single blog post, pulling in the Title, Main Image, Rich Text content, and Author information dynamically from the CMS.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Reference Fields & Author Pages.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch the video on Reference Fields. Edit your CMS Collections to link "Blog Posts" to "Authors".</li>
+                      <li><strong>Hour 3-4:</strong> Design the "Authors Template" page. On this page, show the Author's picture and bio. Then, add a Collection List showing all the blog posts written *by that specific author*.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Filtering, Sorting, and Final Touches.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn about filtering and sorting Collection Lists. Add a "Featured Posts" section to your homepage that only shows posts with a "featured" switch turned on in the CMS.</li>
+                      <li><strong>Hour 3-4:</strong> Make the entire blog fully responsive and test all links. You now have a complete, dynamic publication.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: Niche Real Estate Listing Site</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a dynamic website showcasing real estate listings, managed entirely through the Webflow CMS. This project moves beyond a simple blog to a structured directory.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>CMS Setup:</strong> Create a "Listings" CMS Collection with fields for: Address (Text), Price (Number), Main Image (Image), Gallery (Multi-image), Description (Rich Text), Bedrooms (Number), Bathrooms (Number), and Agent (Reference). Create an "Agents" collection with Name, Photo, and Email.</li>
+            <li><strong>Listings Page:</strong> Create a main "/listings" page that displays all properties in a grid. Each card in the grid should show the property's image, address, price, and number of beds/baths.</li>
+            <li><strong>Dynamic Property Template:</strong> Design the Collection Page for a single listing. This page will dynamically display all the details for that property, including the full image gallery and the contact information for the referenced agent.</li>
+            <li><strong>Advanced Filtering:</strong> Add filter buttons to the main listings page that allow users to sort properties by price (High-to-Low or Low-to-High).</li>
+          </ol>
+        </div>
+      </details>
+      
+      <!-- Week 4 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 4 — Introduction to Bubble: Building Web Apps</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Understand the fundamentals of building a web application in Bubble, including database design, workflows, and user authentication.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Bubble, Database Design (Things, Fields), Workflows, Conditionals, User Management.</p>
+          <p class="mt-1"><strong>Source Material:</strong> `The Bubble Beginners Bootcamp Course` - Modules 1-4. ~5h 15m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Bubble Interface & Database.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 1 videos on the Editor, Canvas, Inspector, and The Database.</li>
+                      <li><strong>Hour 3-4:</strong> Start the Weekly Project. In the Bubble Data tab, create a new "Thing" called "Recipe". Add fields: `Name` (text), `Instructions` (text), `Main Image` (image), and `Prep Time` (number).</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Dynamic Data & Repeating Groups.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1:</strong> Watch Module 1 videos on Dynamic Data and Repeating Groups.</li>
+                      <li><strong>Hour 2-4:</strong> On your Bubble page, add a Repeating Group. Set its data source to "Do a search for: Recipes". Inside the first cell, add a text element for "Current cell's Recipe's Name" and an image for "Current cell's Recipe's Main Image".</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Workflows & Creating Data.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1:</strong> Watch Module 1 video on Workflows.</li>
+                      <li><strong>Hour 2-4:</strong> Build a form with input fields for a recipe's name, instructions, etc., and a "Submit" button. Create a workflow for the button: `When Button is clicked` -> `Step 1: Create a new thing...` (Type: Recipe, set fields from the input values).</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: User Signup & Login.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 4 videos on Login page design and the Sign up/Log in workflows.</li>
+                      <li><strong>Hour 3-4:</strong> Create a Login/Signup page. Use Bubble's built-in actions (`Account` -> `Sign the user up` and `Log the user in`) to create a full authentication system.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Privacy Rules & Conditionals.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 4 video on Privacy. Go to the Data tab and set up a basic privacy rule: A "Recipe" can only be viewed if "Current User is logged in".</li>
+                      <li><strong>Hour 3-4:</strong> Practice conditionals. Make the "Submit Recipe" button visible only when "Current User is logged in".</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "RateMySetup" - A Social Platform for Desk Setups</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a web app where users can sign up, post pictures of their desk/office setups, and other users can view them. This focuses on user-generated content and authentication.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Database Setup:</strong> Create a `User` type (built-in). Create a `Setup` type with fields: `Title` (text), `Image` (image), `Description` (text), and `Creator` (data type: User).</li>
+            <li><strong>User Authentication:</strong> Build a header with "Sign Up" and "Log In" buttons that show/hide based on whether the user is logged in. Create workflows for signing up and logging in.</li>
+            <li><strong>Content Creation:</strong> Design a page or popup where logged-in users can upload an image of their setup and add a title and description. The creation workflow must link the new `Setup` to the `Current User`.</li>
+            <li><strong>Public Gallery:</strong> Create a homepage with a repeating group that displays all the `Setup` images and titles from the database. Make this page viewable by everyone.</li>
+            <li><strong>User Profiles:</strong> (Bonus) Create a simple public profile page that shows a user's name and a repeating group of all the setups they have submitted.</li>
+          </ol>
+        </div>
+      </details>
+      
+    <!-- MONTH 1 MILESTONE -->
+    <div class="mt-10 pt-8 border-t-2 border-dashed border-primary">
+        <div class="bg-white rounded-xl p-6 border-2 border-primary shadow-lg">
+            <h3 class="text-xl font-bold text-primary"><i class="fa-solid fa-award"></i> Month 1 Milestone Project: The Freelancer's Portfolio</h3>
+            <p class="mt-2 text-slate-600">Combine your design and development skills to build a professional, multi-page portfolio website for yourself. This is the cornerstone of your freelance career.</p>
+            <h4 class="font-semibold mt-4">Project Requirements:</h4>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+                <li><strong>Four Core Pages:</strong> A homepage that grabs attention, an 'About Me' page that tells your story, a 'Portfolio' page to showcase your work (you can add the "Innovate AI" and "Real Estate" projects here), and a 'Contact' page with a working form.</li>
+                <li><strong>Webflow CMS for Projects:</strong> The 'Portfolio' page must be powered by the Webflow CMS. This allows you to easily add new projects in the future without touching the design. Each project should have its own dynamic detail page.</li>
+                <li><strong>Advanced Interactions:</strong> Implement at least two subtle on-scroll or on-hover interactions to bring the site to life (e.g., cards that scale up on hover, elements that fade in as you scroll). Use the skills from `Complete Web Design from Figma to Webflow` - Module 19.</li>
+                <li><strong>Fully Responsive & SEO Optimized:</strong> The site must be flawless on all devices and have proper titles, descriptions, and image alt-tags set.</li>
+            </ul>
+            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-purple-800">Monetization Step:</h4>
+    <p class="text-sm text-purple-700">With this portfolio in hand, you are now ready to start earning. Create a profile on Upwork or Fiverr. Your "gig" will be: "I will design and build a professional 3-page responsive website in Webflow." Price your first gig competitively at **$300-$500** to get your first review. Use your new portfolio as the primary example of your work.</p>
+    <p class="text-sm text-purple-700 mt-2 pt-2 border-t border-purple-200">
+        <strong>Business Strategy Source:</strong> <em>Complete Web Design from Figma to Webflow</em>, Part 5 (Modules 25-27 on finding work, Upwork, and pricing).
+    </p>
+</div>
+        </div>
+    </div>
+      
+      <!-- Week 5 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 5 — Advanced Bubble: Data Relationships & UI/UX</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Go beyond simple apps and learn to build complex features by creating relationships between data types and designing a clean, multi-page user experience in Bubble.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Bubble (Data Relationships, URL Parameters, Reusable Elements, Custom States).</p>
+          <p class="mt-1"><strong>Source Material:</strong> `The Bubble Beginners Bootcamp Course` - Modules 5-7. ~3h 40m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: One-to-Many Data Relationships.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn the concept of linking data. For example, one `Project` can have many `Tasks`.</li>
+                      <li><strong>Hour 3-4:</strong> Start the Weekly Project. In the database, create a `Project` thing and a `Task` thing. On the `Task` thing, add a new field called `Project` and set its type to `Project`. This creates the relationship.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Displaying Relational Data.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to display data from a related "thing".</li>
+                      <li><strong>Hour 3-4:</strong> On a project page, create a repeating group of `Tasks`. The data source will be "Do a search for Tasks" with a constraint: `Project = Current page's Project`.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Sending Data Between Pages.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to use URL parameters to "send data to a page". When a user clicks on a project in a list, you'll navigate them to a generic "Project Page" and send that specific project's unique ID.</li>
+                      <li><strong>Hour 3-4:</strong> Implement this in your project. Create a main dashboard with a list of projects. When a project is clicked, use the "Go to page" workflow action to send the user to the project detail page.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Reusable Elements.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch the lecture on Reusable Elements. Understand their value for components like headers and footers.</li>
+                      <li><strong>Hour 3-4:</strong> Create a reusable header for your app with navigation links and the user's profile picture. Add this reusable element to all of your app's pages.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Custom States for UI.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn about Custom States for controlling visibility of elements without reloading the page (e.g., switching between tabs on a page).</li>
+                      <li><strong>Hour 3-4:</strong> On your project page, create two tabs: "Tasks" and "Members". Use custom states and conditionals to show the correct group of elements when a tab is clicked.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "UpVote" - A Reddit/Product Hunt Clone</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a community platform where users can submit "posts" (e.g., ideas, links, products) and other users can upvote them. This project heavily relies on data relationships.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Database Design:</strong> A `User` thing. A `Post` thing with fields like `Title`, `Content`, and `Creator` (type: User). Crucially, add a field on `Post` called `Upvoters` which is a **list of Users**. Also add an `Upvote Count` (type: number).</li>
+            <li><strong>Submitting Posts:</strong> Create a form for logged-in users to create a new `Post`.</li>
+            <li><strong>The Upvote Workflow:</strong> On the main repeating group of posts, add an "upvote" icon. The workflow for this icon will:
+                <ul>
+                    <li>Make changes to Current cell's Post: `Upvoters` **add** `Current User`.</li>
+                    <li>Make changes to Current cell's Post: `Upvote Count` = `This Post's Upvote Count + 1`.</li>
+                    <li>Add a conditional to the icon: It should be unclickable or look different if `Current cell's Post's Upvoters` **contains** `Current User`.</li>
+                </ul>
+            </li>
+            <li><strong>Sorting:</strong> On the main page, sort the repeating group of posts by `Upvote Count` in descending order, so the most popular posts are always at the top.</li>
+          </ol>
+        </div>
+      </details>
+      
+<!-- ========== END OF PART 1 of 5 ========== -->
+
+<!-- ========== START OF PART 2 of 5 ========== -->
+      
+      <!-- Week 6 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 6 — Automation & Airtable as a Backend</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Learn the fundamentals of Airtable as a powerful, spreadsheet-like database and use n8n to create an automation that syncs data between a web form and your Airtable base.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Airtable (Bases, Tables, Views, Linked Records), n8n (Airtable Node, Webhooks).</p>
+          <p class="mt-1"><strong>Source Material:</strong> `Udemy - Airtable - The Complete Guide`, `AI Automation Build LLM Apps & AI-Agents with n8n`. ~2h 30m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Airtable Fundamentals.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch the "Fundamentals" and "Data" sections of the Airtable course. Understand Bases, Tables, Fields, and Records.</li>
+                      <li><strong>Hour 3-4:</strong> Start the Weekly Project. Create a new Airtable Base. Inside, create two tables: "Applicants" (with fields for Name, Email, Status) and "Positions" (with a field for Position Title).</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Linked Records & Views.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch the "Relationships" and "Views" sections of the Airtable course.</li>
+                      <li><strong>Hour 3-4:</strong> Link your tables. In the "Applicants" table, add a new field called "Applied For" and set its type to "Link to another record", pointing to the "Positions" table. Create a new "Kanban" view in the "Applicants" table, stacked by the "Status" field.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Airtable Forms & Automation Triggers.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch the "Forms" section of the Airtable course. Create an Airtable form from your "Applicants" table.</li>
+                      <li><strong>Hour 3-4:</strong> Learn about n8n's Airtable "On Record Created" trigger. Set up a new n8n workflow that watches your "Applicants" table for new entries.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Building the n8n Workflow.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Connect the n8n Airtable trigger to a Gmail node.</li>
+                      <li><strong>Hour 3-4:</strong> Configure the Gmail node to send a confirmation email to the new applicant, using data from the trigger (e.g., "Hi {{ $json.fields.Name }}, we've received your application.").</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: End-to-End Testing & Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-3:</strong> Finalize and activate your n8n workflow. Submit a test application through the public Airtable form URL.</li>
+                      <li><strong>Hour 4:</strong> Verify that: 1) A new record appears in your Airtable base. 2) Your n8n workflow runs successfully. 3) You receive the confirmation email. 4) You can drag the applicant's card through the Kanban stages.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: Automated Job Application Tracker</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a simple but powerful system for a small business to manage job applications, combining a user-friendly form with an automated backend and a visual tracking system.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Airtable Base Setup:</strong> Create an "HR System" base with two tables: `Positions` (e.g., "Marketing Lead", "Developer") and `Applicants` (Name, Email, Resume, Status, Notes, and a linked record to `Positions`).</li>
+            <li><strong>Public Application Form:</strong> Create an Airtable Form view for the `Applicants` table. This generates a public link you can share for people to apply.</li>
+            <li><strong>Kanban Tracking View:</strong> In your `Applicants` table, create a Kanban view. Use the "Status" field (with options like 'Applied', 'Screening', 'Interview', 'Hired', 'Rejected') as the Kanban columns.</li>
+            <li><strong>Confirmation Automation:</strong> Create an n8n workflow. Use the "Airtable Trigger" node to watch for new records in your `Applicants` table.</li>
+            <li><strong>Automated Email:</strong> Connect the trigger to a Gmail/Resend node that sends a personalized confirmation email to the applicant's email address, confirming receipt of their application for the specific position they applied for.</li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- Week 7 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 7 — Notion for Project Management & Documentation</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Master Notion as a tool for project management, client documentation, and building a personal "second brain."</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Notion (Databases, Views, Properties, Templates, Relations, Rollups).</p>
+          <p class="mt-1"><strong>Source Material:</strong> `Udemy - Notion for Project Management - The Ultimate Course`. ~2h 25m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Notion Basics & Databases.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch "The Basics of Notion for Project Management". Understand pages, blocks, and databases.</li>
+                      <li><strong>Hour 3-4:</strong> Create your first database for the Weekly Project: a "Projects" database with properties for Status (Select), Due Date (Date), and Priority (Select).</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Database Views.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch "The different database views for Project Management".</li>
+                      <li><strong>Hour 3-4:</strong> In your "Projects" database, create three different views: a Table view (for a list), a Board view (Kanban by Status), and a Calendar view (organized by Due Date).</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Relations & Rollups.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn about the powerful `Relation` and `Rollup` properties.</li>
+                      <li><strong>Hour 3-4:</strong> Create a second database called "Tasks". Create a `Relation` property to link each task to a project. In the "Projects" database, create a `Rollup` property that shows the percentage of completed tasks for that project.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Templates.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to create database templates to standardize your pages.</li>
+                      <li><strong>Hour 3-4:</strong> Create a "New Project Template". When you click it, it should automatically generate a pre-formatted page with sections for "Project Brief", "Key Deliverables", and "Client Communication Log".</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Building the Client Portal.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Build out the full Weekly Project. Create a main "Client Portals" dashboard page. On this page, create a section for each "client" and embed linked views of their specific projects and tasks. Share a client's page publicly.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: Freelancer Client Portal Template in Notion</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a comprehensive and reusable Notion template that you can duplicate and share with new freelance clients to manage projects, share documents, and keep all communication in one place.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Master Databases:</strong> Create three core databases: `Projects`, `Tasks` (related to Projects), and `Meetings` (related to Projects).</li>
+            <li><strong>Main Dashboard:</strong> Create a top-level "Client Portal" page. This page will have a clean layout.</li>
+            <li><strong>Linked Views:</strong> On the dashboard, create linked views of your databases. Show a "Current Projects" board, an "Upcoming Tasks" list (filtered for the client and sorted by due date), and a "Meeting Calendar".</li>
+            <li><strong>Client-Specific Pages:</strong> Create static pages within the portal for "Project Proposal & Contract", "Invoices", and "Brand Assets".</li>
+            <li><strong>Create a Template:</strong> Turn the entire "Client Portal" page into a template button, so you can quickly generate a new, clean portal for every new client you onboard.</li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- Week 8 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 8 — Monetization & Freelance Foundations</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Shift from learning to earning. Package your no-code skills, create a professional freelance presence, and learn how to find, pitch, and win your first paid projects.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Upwork, Fiverr, Pitching, Pricing, Portfolio Building.</p>
+          <p class="mt-1"><strong>Source Material:</strong> `Complete Web Design from Figma to Webflow` - Modules 23-27. ~2h 15m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Building Your Portfolio.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Take your portfolio website from the Month 1 Milestone. Refine it. Add your best projects from the past 7 weeks (e.g., the Real Estate Site, the UpVote app, the Job Application Tracker). For each one, write a short case study: what was the problem, what did you build, what tools did you use?</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Platform Setup.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Modules 25-26 on where to find work and Upwork tips.</li>
+                      <li><strong>Hour 3-4:</strong> Create a professional, 100% complete profile on Upwork. Use a clear, benefit-driven headline like "Expert Webflow & Bubble Developer | I build fast, beautiful websites and apps."</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Productizing Your Services.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 27 on Pricing.</li>
+                      <li><strong>Hour 3-4:</strong> On your Upwork profile, create 3 "Project Catalog" gigs. These are fixed-price offers. Examples: 1) "I will build a 3-page marketing website in Webflow for $750". 2) "I will create a lead-capture automation for $250". 3) "I will build a Bubble MVP prototype for $2000".</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: The Art of the Proposal.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to write a winning proposal. It should be short, address the client's problem directly, and link to a relevant example from your portfolio.</li>
+                      <li><strong>Hour 3-4:</strong> Find 5 real, entry-level jobs on Upwork that you feel qualified for. Write a custom, personalized proposal for each one. Do not use a generic template.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Review & Refine.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Review your portfolio, your Upwork profile, and your sent proposals. Ask for feedback from a peer if possible. The goal this week is not just to learn, but to build the assets that will get you paid.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: Launch Your Freelance Brand</h4>
+          <p class="mt-2"><strong>Goal:</strong> This week, the project *is* your business. Your deliverable is not a website or an app, but a complete, client-ready freelance presence and a record of your first outreach efforts.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Finalize Portfolio Website:</strong> Complete your personal portfolio, ensuring it has at least 3 high-quality case studies with live links.</li>
+            <li><strong>Complete Freelance Profiles:</strong> Create 100% complete profiles on Upwork and optionally Fiverr.</li>
+            <li><strong>Create Productized Gigs:</strong> Publish at least two fixed-price service packages on your chosen platform.</li>
+            <li><strong>Send 5 Pitches:</strong> Find five real job postings that match your current skill level and send thoughtful, personalized proposals. Your goal is to get a response and start a conversation.</li>
+          </ol>
+        </div>
+      </details>
+
+    <!-- MONTH 2 MILESTONE -->
+    <div class="mt-10 pt-8 border-t-2 border-dashed border-primary">
+        <div class="bg-white rounded-xl p-6 border-2 border-primary shadow-lg">
+            <h3 class="text-xl font-bold text-primary"><i class="fa-solid fa-award"></i> Month 2 Milestone Project: "SkillSwap" - A Local Bartering Platform MVP</h3>
+            <p class="mt-2 text-slate-600">Build a functional Minimum Viable Product (MVP) in Bubble where users can post services they offer (e.g., "I can teach guitar") and browse services offered by others in their city, with a simple internal messaging system.</p>
+            <h4 class="font-semibold mt-4">Project Requirements:</h4>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+                <li><strong>User Profiles with Location:</strong> Users must sign up and add a "City" to their profile.</li>
+                <li><strong>Service Listings (CRUD):</strong> Logged-in users must be able to Create, Read, Update, and Delete their own service listings. Each listing should include a title, description, category, and be linked to the user.</li>
+                <li><strong>Search & Filter:</strong> The main page should display all listings, with the ability for users to filter them by "City".</li>
+                <li><strong>Internal Messaging System:</strong> On a service listing page, a user should be able to click a "Contact" button to send a message to the service provider. The provider can then view and reply to this message in a private "Inbox" page. This requires creating a `Conversation` and `Message` data type.</li>
+                <li><strong>Privacy Rules:</strong> Ensure a user can only edit their own profile and listings. A conversation should only be viewable by the two users involved in it.</li>
+            </ul>
+            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-purple-800">Monetization Step:</h4>
+    <p class="text-sm text-purple-700">You can now build complex web applications. On freelance platforms, start offering "MVP Development with Bubble". Price your first project at **$1,500 - $3,000**. Use "SkillSwap" as your primary portfolio piece, demonstrating your ability to handle databases, user accounts, and complex logic.</p>
+    <p class="text-sm text-purple-700 mt-2 pt-2 border-t border-purple-200">
+        <strong>Business Strategy Source:</strong> <em>Complete Web Design from Figma to Webflow</em>, Part 5 (Module 27 on pricing fixed-rate projects).
+    </p>
+</div>
+        </div>
+    </div>
+      
+    <!-- PHASE 2 HEADING -->
+    <div class="my-10 text-center">
+        <h3 class="text-2xl font-bold text-blue-600">Phase 2: The AI Bridge (Weeks 9-16)</h3>
+        <p class="mt-1 text-slate-500">Your goal is to bridge the gap between no-code and code, learning Python and how to integrate AI services into your applications.</p>
+    </div>
+      
+      <!-- Week 9 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 9 — Python Fundamentals</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Grasp the fundamental concepts of Python programming: setting up your environment, variables, data types, and basic operators. Write your first simple scripts.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Python, VS Code (Code Editor), Terminal/Command Line.</p>
+          <p class="mt-1"><strong>Source Material:</strong> The AI Engineer Course 2025: Complete AI Engineer Bootcamp ▶   Python Module: Why Python?, Setting Up the Environment, Python Variables and Data Types, Basic Python Syntax, More on Operators. ~1h 30m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Setup & First Script.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Follow the "Setting Up the Environment" lectures. Install Python and VS Code on your computer.</li>
+                      <li><strong>Hour 3:</strong> Write your first script: a file `hello.py` that contains `print("Hello, World!")`. Run it from your terminal using `python hello.py`.</li>
+                      <li><strong>Hour 4:</strong> Read about "Why Python?" and watch the lectures on variables and data types.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Variables & Data Types.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Complete all lectures on Variables and Data Types (strings, integers, floats, booleans).</li>
+                      <li><strong>Hour 3-4:</strong> Practice: Create a new Python file. Declare variables for your name (string), age (integer), and height in meters (float). Print them out in a formatted sentence.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: String Manipulation.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Focus on string-specific methods. Learn about f-strings, `.upper()`, `.lower()`, `.strip()`, and slicing.</li>
+                      <li><strong>Hour 3-4:</strong> Start the Weekly Project. Write the part of the script that asks the user for their favorite food and color.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Numbers & Operators.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Go through the "More on Operators" lectures (arithmetic, comparison, logical).</li>
+                      <li><strong>Hour 3-4:</strong> Practice: Write a script that takes two numbers as input and prints their sum, difference, product, and quotient.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Type Casting & Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to convert between data types (e.g., `int()`, `str()`, `float()`). Understand why `input()` always returns a string and how to convert it to a number for calculations.</li>
+                      <li><strong>Hour 3-4:</strong> Complete the Weekly Project. Combine all the concepts to generate and print the story.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "Mad Libs" Command-Line Game</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a simple command-line game that prompts a user for various words (nouns, verbs, adjectives) and then uses those words to complete a pre-written story.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Get User Input:</strong> Use the `input()` function to prompt the user for different types of words. For example: `adjective = input("Enter an adjective: ")`. Ask for at least 5 different words.</li>
+            <li><strong>Store Inputs in Variables:</strong> Store each user response in a clearly named variable.</li>
+            <li><strong>Create a Story Template:</strong> Write a short story as a multi-line string, leaving blanks where the user's words will go.</li>
+            <li><strong>Combine and Print:</strong> Use an f-string to insert the user's words (the variables) into your story template.</li>
+            <li><strong>Print the Final Story:</strong> Print the completed, funny story to the console for the user to read.</li>
+          </ol>
+        </div>
+      </details>
+      
+      <!-- Week 10 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 10 — Python Logic: Conditionals, Functions & Loops</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Master the core logic of programming. You will learn to control the flow of your scripts with `if/else` statements, package code into reusable functions, and repeat actions with loops.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Python (Conditional Statements, Functions, Sequences, Iteration).</p>
+          <p class="mt-1"><strong>Source Material:</strong> The AI Engineer Course 2025: Complete AI Engineer Bootcamp ▶   Python Module: Conditional Statements, Functions, Sequences, Iteration. ~1h 10m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Conditional Logic.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on Conditional Statements (`if`, `elif`, `else`).</li>
+                      <li><strong>Hour 3-4:</strong> Practice: Write a script that asks for a user's age. If they are under 18, print "You are a minor." If they are 18 or older, print "You are an adult."</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Functions.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on Functions. Understand how to define a function (`def`) and return values.</li>
+                      <li><strong>Hour 3-4:</strong> Practice: Convert the age-checking script into a function `check_age(age)` that takes an age as an argument and returns the appropriate string ("minor" or "adult").</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Lists & Tuples.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on Sequences, focusing on lists. Learn how to create lists, append items, and access items by index.</li>
+                      <li><strong>Hour 3-4:</strong> Start the Weekly Project. Create a list that holds the options for the game (rock, paper, scissors).</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: For Loops.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on Iteration, focusing on `for` loops. Learn how to loop through a list.</li>
+                      <li><strong>Hour 3-4:</strong> Practice: Create a list of your favorite movies. Write a `for` loop that prints "I love the movie: [Movie Title]" for each item in the list.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: While Loops & Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1:</strong> Learn about `while` loops for repeating code until a condition is met.</li>
+                      <li><strong>Hour 2-4:</strong> Complete the Weekly Project, using a `while` loop to let the user play multiple rounds.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: Command-Line Rock, Paper, Scissors Game</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build an interactive command-line game where a user can play Rock, Paper, Scissors against the computer.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Get Player's Choice:</strong> Prompt the user to enter their choice.</li>
+            <li><strong>Get Computer's Choice:</strong> Import Python's `random` module. Use `random.choice()` to have the computer select a random option from a list of `['rock', 'paper', 'scissors']`.</li>
+            <li><strong>Determine the Winner:</strong> Use nested `if/elif/else` statements to compare the player's choice and the computer's choice to determine the winner based on the game's rules.</li>
+            <li><strong>Display the Result:</strong> Print a message declaring the winner (or if it's a tie).</li>
+            <li><strong>Loop for Replayability:</strong> Wrap the game logic in a `while True` loop. After each round, ask the user "Play again? (yes/no)". If they say "no", `break` the loop to end the game.</li>
+          </ol>
+        </div>
+      </details>
+      
+<!-- ========== END OF PART 2 of 5 ========== -->
+
+<!-- ========== START OF PART 3 of 5 ========== -->
+
+      <!-- Week 11 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 11 — Automation Fundamentals with n8n</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Master the basics of n8n, a powerful no-code automation tool. You will learn to connect different applications and automate a multi-step workflow.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> n8n, APIs (conceptual), Triggers, Nodes, JSON data structure.</p>
+          <p class="mt-1"><strong>Source Material:</strong> `AI Automation Build LLM Apps & AI-Agents with n8n` - Modules 02-03. ~1h 30m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: n8n Setup & Core Concepts.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 02 videos on what automations and APIs are.</li>
+                      <li><strong>Hour 3-4:</strong> Follow Module 03 to install n8n locally on your computer. Explore the interface, understand the canvas, and create a simple workflow with a "Manual" trigger and a "No-Op" (Do Nothing) node.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Working with Data & Simple Triggers.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Manually add some JSON data to a "Code" node. Learn how to access this data in subsequent nodes using expressions like `{{ $json.myKey }}`.</li>
+                      <li><strong>Hour 3-4:</strong> Build a simple two-node workflow. Use the "Schedule" trigger to run every minute, and connect it to a "Google Sheets" node to add a new row with the current timestamp.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Connecting to Webhooks.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn about Webhooks. Create a new workflow with a "Webhook" trigger. Copy the test URL.</li>
+                      <li><strong>Hour 3-4:</strong> Connect your Webflow contact form (from a previous project) to the n8n webhook URL. Submit the form and watch the data appear in n8n.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Logic & Routing.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn about the "IF" node in n8n.</li>
+                      <li><strong>Hour 3-4:</strong> Modify your Webflow-to-n8n workflow. Use an "IF" node to check if the incoming message contains the word "urgent". If it does, send a notification to a Discord/Slack channel. If not, proceed to the next step.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-3:</strong> Build the weekly project, connecting all the nodes and ensuring the data flows correctly.</li>
+                      <li><strong>Hour 4:</strong> Activate your workflow. Test it end-to-end and debug any issues using the execution log.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: Automated "New Customer" Onboarding Workflow</h4>
+          <p class="mt-2"><strong>Goal:</strong> Create a robust automation that triggers when a customer submits a "Get a Quote" form on a website, then processes the data and sends it to multiple services.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Trigger:</strong> Start with a Webhook node that will receive data from a Webflow or Tally form (Name, Email, Company, Project Details).</li>
+            <li><strong>Data Storage:</strong> Connect the webhook to an Airtable node. Automatically create a new record in a "Leads" base with the submitted information.</li>
+            <li><strong>Internal Notification:</strong> Add a parallel branch. Send a message to a Slack or Discord channel with the new lead's details for the "sales team".</li>
+            <li><strong>Customer Confirmation:</strong> Add a Gmail/Resend node. Send a confirmation email to the user who submitted the form, thanking them and letting them know you'll be in touch. Use data from the webhook to personalize the email (e.g., "Hi [Name]").</li>
+          </ol>
+        </div>
+      </details>
+      
+      <!-- Week 12 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 12 — Working with APIs and HTTP Requests</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Learn how to connect to any application on the web, even if it doesn't have a dedicated n8n node, by using the universal language of APIs via the HTTP Request node.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> n8n HTTP Request Node, API Documentation, REST APIs (GET, POST), Authentication (API Keys, Bearer Tokens).</p>
+          <p class="mt-1"><strong>Source Material:</strong> `AI Automation Build LLM Apps & AI-Agents with n8n` - Module 08; general API documentation. ~ 45m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: API Fundamentals & GET Requests.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Read about REST APIs. Understand what a GET request is (retrieving data).</li>
+                      <li><strong>Hour 3-4:</strong> Find a free, public API (like the JSONPlaceholder API). In n8n, use an HTTP Request node to make a GET request to fetch a list of posts or users. Examine the JSON data that comes back.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: API Keys & Authentication.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn about authentication. Sign up for a free API key from a service like OpenWeatherMap or The Movie Database (TMDB).</li>
+                      <li><strong>Hour 3-4:</strong> In n8n, use the HTTP Request node to make an authenticated GET request to the weather API, passing your API key as a query parameter.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: POST Requests.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Understand what a POST request is (sending data to create something).</li>
+                      <li><strong>Hour 3-4:</strong> Use the JSONPlaceholder API again. This time, use an HTTP Request node with the POST method to create a new "post". You will need to define the data to send in the "Body" of the request.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Processing API Data.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn about the "Item Lists" node in n8n for splitting up arrays of data from an API call.</li>
+                      <li><strong>Hour 3-4:</strong> Make a GET request to an API that returns a list of items. Use the Item Lists node to process each item one by one, and then save each item's name to a new row in Google Sheets.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-3:</strong> Build the weekly project. This involves making a GET request, extracting the relevant data, and then making a separate POST request for each item.</li>
+                      <li><strong>Hour 4:</strong> Refine your workflow. Add a "Schedule" trigger so it runs automatically once a day.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "Tech News Sync" Automation</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build an automation that fetches the top stories from a tech news API (like the Hacker News API) and posts them to a different platform, like a Discord channel or an Airtable base.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Fetch Top Stories:</strong> Use an HTTP Request node to make a GET request to the Hacker News API endpoint that returns a list of top story IDs.</li>
+            <li><strong>Loop Through IDs:</strong> Use the "Item Lists" node to split the list of IDs into individual items.</li>
+            <li><strong>Fetch Story Details:</strong> Inside the loop (by connecting another node to the output of Item Lists), use a second HTTP Request node. For each ID, make another GET request to the API endpoint for an individual item to get its details (title, URL, score).</li>
+            <li><strong>Filter by Score:</strong> Use an "IF" node to check if the story's score is greater than a certain number (e.g., 100). Only proceed for high-scoring stories.</li>
+            <li><strong>Post to Destination:</strong> If the story passes the filter, use a Discord or Airtable node to post the story's title and URL.</li>
+          </ol>
+        </div>
+      </details>
+
+    <!-- MONTH 3 MILESTONE -->
+    <div class="mt-10 pt-8 border-t-2 border-dashed border-primary">
+        <div class="bg-white rounded-xl p-6 border-2 border-primary shadow-lg">
+            <h3 class="text-xl font-bold text-primary"><i class="fa-solid fa-award"></i> Month 3 Milestone Project: AI-Enhanced Job Board Aggregator</h3>
+            <p class="mt-2 text-slate-600">Build a complete web application in Bubble that serves as a personalized job board. The app will have an n8n workflow running in the background that uses an external API to fetch new job listings, filters them based on keywords, and populates the Bubble database.</p>
+            <h4 class="font-semibold mt-4">Project Components:</h4>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+                <li><strong>The Bubble App (Front-End):</strong>
+                    <ul>
+                        <li>A user authentication system where users can sign up.</li>
+                        <li>A "Settings" page where a user can save their job preferences (e.g., keywords like "Python", "No-Code", "AI Engineer").</li>
+                        <li>A dashboard page with a repeating group that displays a list of jobs matching their saved keywords.</li>
+                    </ul>
+                </li>
+                <li><strong>The n8n Workflow (Back-End):</strong>
+                    <ul>
+                        <li>A "Schedule" trigger that runs the workflow once every hour.</li>
+                        <li>An "HTTP Request" node that fetches new job listings from a public jobs API (e.g., the GitHub Jobs API or similar).</li>
+                        <li>A "Bubble" node to get the list of all users and their saved keywords.</li>
+                        <li>A loop that goes through each job listing and checks if its title or description contains any of the keywords from any user.</li>
+                        <li>If a job matches a user's keyword, use the Bubble "Data API" (via another HTTP Request node) to create a new "Job" entry in the Bubble database, linking it to that user.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-purple-800">Monetization Step:</h4>
+    <p class="text-sm text-purple-700">You are now a full-fledged Automation Developer. You can build systems, not just websites. Start offering "Custom Business Automation Solutions" or "Automated SaaS MVP" services. Price these projects from **$3,000 - $7,000**. This job board is a powerful portfolio piece demonstrating front-end, back-end, and database skills.</p>
+    <p class="text-sm text-purple-700 mt-2 pt-2 border-t border-purple-200">
+        <strong>Business Strategy Source:</strong> <em>Master n8n AI Agents Build & Sell AI Agents</em>, Module 2 (Lead Generation n8n AI Agents and Workflows).
+    </p>
+    </div>
+        </div>
+    </div>
+      
+      <!-- Week 13 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 13 — Integrating AI into Automations (LLMs)</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Integrate a Large Language Model (like OpenAI's GPT) into an n8n workflow to add intelligence to your automations. You will move from just moving data to transforming and understanding it.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> n8n OpenAI Node, Prompt Engineering, API Keys, AI Agents (conceptual).</p>
+          <p class="mt-1"><strong>Source Material:</strong> `AI Automation Build LLM Apps & AI-Agents with n8n` - Modules 04 & 06. ~1h 20m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: OpenAI API & Setup.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 04 videos. Sign up for an OpenAI Platform account and get your API key. Understand the pricing model.</li>
+                      <li><strong>Hour 3-4:</strong> In n8n, create a new workflow. Add the OpenAI node and configure it with your API key. Practice sending a simple prompt like "Write a short poem about automation" and check the output.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Dynamic Prompts.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to use expressions to pass data from previous nodes into your OpenAI prompt.</li>
+                      <li><strong>Hour 3-4:</strong> Create a workflow that takes a `product_name` from a "Code" node and uses the OpenAI node to write a 30-word marketing description for that product.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Prompt Engineering Basics.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 06 on Prompt Engineering. Learn about giving the AI a role, context, and clear instructions.</li>
+                      <li><strong>Hour 3-4:</strong> Refine the previous day's workflow. Change the prompt to: "You are a senior marketing copywriter. Your task is to write a punchy, 30-word marketing description for the following product: {{ $json.product_name }}". Compare the quality of the output.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: AI for Data Structuring.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> A powerful AI use-case is extracting structured data from unstructured text.</li>
+                      <li><strong>Hour 3-4:</strong> In n8n, feed a block of text (e.g., an email) into the OpenAI node. Prompt it to "Extract the person's name, company, and phone number from the text and return it as a JSON object." Use the "Code" node to view the structured output.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-3:</strong> Build the weekly project from start to finish, connecting the Google Sheets trigger, the OpenAI node, and the final update node.</li>
+                      <li><strong>Hour 4:</strong> Test with various real-world reviews to see how well the sentiment analysis works. Adjust the prompt for better accuracy.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: AI-Powered Review Sentiment Analyzer</h4>
+          <p class="mt-2"><strong>Goal:</strong> Create an n8n workflow that automatically analyzes new customer reviews from a Google Sheet, determines the sentiment, and categorizes it.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Trigger:</strong> Use the Google Sheets "On Row Added" trigger. Set it to watch a sheet with a "Review" column.</li>
+            <li><strong>AI Analysis:</strong> Pipe the review text into an OpenAI node. Use a carefully crafted prompt: "Analyze the sentiment of the following customer review. Respond with only a single word: Positive, Negative, or Neutral. Review: '{{ $json.Review }}'".</li>
+            <li><strong>Categorize:</strong> Take the single-word output from the AI. Use the Google Sheets "Update Row" node to write this sentiment ("Positive", "Negative", or "Neutral") into a "Sentiment" column in the same row that triggered the workflow.</li>
+          </ol>
+        </div>
+      </details>
+      
+      <!-- Week 14 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 14 — Foundations of Natural Language Processing (NLP)</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Move from using AI as a "black box" to understanding the foundational Python techniques for how computers process human language (NLP).</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Python, NLP concepts (Tokenization, Stop Words, Stemming), NLTK library.</p>
+          <p class="mt-1"><strong>Source Material:</strong> The AI Engineer Course 2025: Complete AI Engineer Bootcamp ▶   NLP Module: Introduction, Text Preprocessing. ~50m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: NLP Concepts & NLTK Setup.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch the "Intro to NLP" lectures. Understand what NLP is and its real-world applications.</li>
+                      <li><strong>Hour 3-4:</strong> In VS Code, create a new Python project. Install the NLTK library (`pip install nltk`). Run the NLTK downloader to get the necessary packages.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Tokenization.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on Text Preprocessing, focusing on tokenization (splitting text into words or sentences).</li>
+                      <li><strong>Hour 3-4:</strong> Write a Python script that takes a sentence, and using `nltk.word_tokenize()` and `nltk.sent_tokenize()`, prints the list of word tokens and sentence tokens.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Stop Word Removal.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn what stop words are ("a", "the", "is", etc.) and why they are removed.</li>
+                      <li><strong>Hour 3-4:</strong> Write a script that tokenizes a sentence and then loops through the tokens, creating a new list that excludes any words present in NLTK's English stop words list.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Normalization - Stemming & Lemmatization.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Understand the difference between Stemming (chopping words to their root, e.g., 'running' -> 'run') and Lemmatization (reducing words to their dictionary form).</li>
+                      <li><strong>Hour 3-4:</strong> Practice using NLTK's `PorterStemmer` to stem words in a list of tokens.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-3:</strong> Build the weekly project, creating a single function that chains all the preprocessing steps together.</li>
+                      <li><strong>Hour 4:</strong> Find an article online, copy a few paragraphs, and run it through your script to see the cleaned output.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "Text Cleaner" Python Function</h4>
+          <p class="mt-2"><strong>Goal:</strong> Write a Python function that takes a raw string of text and performs a full preprocessing pipeline on it.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Define the Function:</strong> Create a function `def clean_text(raw_text):`.</li>
+            <li><strong>Lowercase Text:</strong> The first step inside the function is to convert the entire `raw_text` to lowercase using `.lower()`.</li>
+            <li><strong>Tokenize:</strong> Use `nltk.word_tokenize()` on the lowercased text.</li>
+            <li><strong>Remove Punctuation & Stop Words:</strong> Loop through the tokens. In the loop, use an `if` statement to keep only tokens that are alphabetic (`.isalpha()`) and are not in the NLTK stop words list.</li>
+            <li><strong>Stem Tokens:</strong> Perform stemming on the remaining tokens.</li>
+            <li><strong>Return Cleaned List:</strong> The function should return the final list of cleaned, stemmed tokens.</li>
+          </ol>
+        </div>
+      </details>
+      
+      <!-- Week 15 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 15 — Extracting Meaning from Text (NLP Features)</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Learn how to turn cleaned text into numerical representations (vectorization) and how to automatically identify important entities within text.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Python, Scikit-learn, spaCy, TF-IDF, Named Entity Recognition (NER).</p>
+          <p class="mt-1"><strong>Source Material:</strong> The AI Engineer Course 2025: Complete AI Engineer Bootcamp ▶   NLP Module: Identifying Parts of Speech and Named Entities, Vectorizing Text, Topic Modelling. ~1h 15m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Named Entity Recognition (NER).</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on NER. Understand how it identifies people, organizations, locations, etc.</li>
+                      <li><strong>Hour 3-4:</strong> Install the spaCy library (`pip install spacy`) and download its English model. Write a script that processes a sentence and prints out the identified entities and their labels (e.g., "Apple", "ORG").</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Vectorization Theory.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on Vectorizing Text. Focus on understanding the intuition behind Bag-of-Words (BoW) and Term Frequency-Inverse Document Frequency (TF-IDF).</li>
+                      <li><strong>Hour 3-4:</strong> Manually calculate the BoW representation for two very short sentences to solidify your understanding.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: TF-IDF with Scikit-learn.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Install Scikit-learn (`pip install scikit-learn`). Learn how to use the `TfidfVectorizer`.</li>
+                      <li><strong>Hour 3-4:</strong> Write a Python script that takes a list of three sentences, fits the `TfidfVectorizer` to them, and then transforms them into a numerical matrix. Print the matrix.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Topic Modelling Concepts.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch the lectures on Topic Modelling. Understand at a high level what it does (discovers abstract topics in a collection of documents).</li>
+                      <li><strong>Hour 3-4:</strong> Start the Weekly Project. Write the part of the script that loads a text file and uses spaCy to extract all the names of people and organizations.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-3:</strong> Add the TF-IDF functionality to your project. After cleaning the text, calculate the TF-IDF scores for the words.</li>
+                      <li><strong>Hour 4:</strong> Modify the script to print the top 10 words with the highest TF-IDF scores, as these are the most important keywords.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "Article Summarizer" Script</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a Python script that can analyze a news article and automatically extract the key entities (people, places) and the most important keywords.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Load Text:</strong> The script should read the content of a `.txt` file containing a news article.</li>
+            <li><strong>Find Entities:</strong> Use spaCy to process the article text and create a list of all unique people, organizations, and locations mentioned.</li>
+            <li><strong>Clean Text for Keywords:</strong> Use your `clean_text` function from last week to preprocess the entire article.</li>
+            <li><strong>Calculate Keyword Importance:</strong> Use Scikit-learn's `TfidfVectorizer` on the article text (or a collection of articles) to find the words with the highest importance scores.</li>
+            <li><strong>Display Report:</strong> The script should print a final report to the console, showing: 1) The list of named entities found, and 2) The top 10 most important keywords based on their TF-IDF scores.</li>
+          </ol>
+        </div>
+      </details>
+
+<!-- ========== END OF PART 3 of 5 ========== -->
+
+
+<!-- ========== START OF PART 4 of 5 ========== -->
+      
+      <!-- Week 16 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 16 — Building a Text Classification Model</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Combine all your Python NLP skills to build, train, and test your first machine learning model for classifying text.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Python, Scikit-learn, Pandas, Machine Learning Pipeline (Vectorize -> Train Model).</p>
+          <p class="mt-1"><strong>Source Material:</strong> The AI Engineer Course 2025: Complete AI Engineer Bootcamp ▶   NLP Module: Building Your Own Text Classifier, Categorizing Fake News (Case Study). ~1h</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Classification Concepts & Data Prep.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on Text Classification. Understand supervised learning and the need for labeled data.</li>
+                      <li><strong>Hour 3-4:</strong> Install the Pandas library (`pip install pandas`). Find a labeled dataset (e.g., the SMS Spam Collection). Use Pandas to load the data into a DataFrame and explore it.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Train-Test Split.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn why it's crucial to split your data into a training set (for the model to learn from) and a testing set (to evaluate its performance on unseen data).</li>
+                      <li><strong>Hour 3-4:</strong> Use Scikit-learn's `train_test_split` function to divide your data into features (the text) and labels (the category), and then into training and testing sets.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Building the ML Pipeline.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn about Scikit-learn's `Pipeline` object, which lets you chain steps together.</li>
+                      <li><strong>Hour 3-4:</strong> Create a pipeline that first applies the `TfidfVectorizer` to the text and then feeds the output into a classification algorithm (like `NaiveBayes`).</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Training and Prediction.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Use the `.fit()` method to train your pipeline on the training data.</li>
+                      <li><strong>Hour 3-4:</strong> Use the `.predict()` method on your trained model to make predictions on your unseen test data. Compare the predictions to the actual labels.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Evaluation & Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to calculate the accuracy of your model using `accuracy_score` from Scikit-learn.</li>
+                      <li><strong>Hour 3-4:</strong> Put all the pieces together for the weekly project. Add a feature that allows you to input a new, custom sentence and have the model predict its category.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "News Article Classifier"</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build and train a machine learning model that can classify news articles into different categories (e.g., 'Business', 'Tech', 'Sports', 'Entertainment').</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Find a Dataset:</strong> Use a public dataset like the AG News dataset, which contains headlines and categories.</li>
+            <li><strong>Load and Prepare Data:</strong> Load the data using Pandas. Split it into training and testing sets.</li>
+            <li><strong>Create and Train a Pipeline:</strong> Build a Scikit-learn pipeline that consists of a `TfidfVectorizer` and a classifier (e.g., `LogisticRegression` or `LinearSVC`). Train the pipeline on your training data.</li>
+            <li><strong>Evaluate Performance:</strong> Make predictions on the test set and calculate the accuracy of your model. Aim for over 80% accuracy.</li>
+            <li><strong>Create a Prediction Function:</strong> Write a function that takes a new, unseen headline as input, and uses your trained model to predict which category it belongs to.</li>
+          </ol>
+        </div>
+      </details>
+      
+    <!-- MONTH 4 MILESTONE -->
+    <div class="mt-10 pt-8 border-t-2 border-dashed border-primary">
+        <div class="bg-white rounded-xl p-6 border-2 border-primary shadow-lg">
+            <h3 class="text-xl font-bold text-primary"><i class="fa-solid fa-award"></i> Month 4 Milestone Project: Intelligent Customer Support Ticket Router</h3>
+            <p class="mt-2 text-slate-600">This capstone project for Phase 2 combines your no-code automation skills with your new Python NLP capabilities to create a truly intelligent business system.</p>
+            <h4 class="font-semibold mt-4">Project Components:</h4>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+                <li><strong>The Python API (Back-End):</strong>
+                    <ul>
+                        <li>Train a text classification model on a dataset of customer support tickets and their categories (e.g., "Billing Issue", "Technical Support", "Sales Question").</li>
+                        <li>Wrap this trained model in a simple web API using a framework like Flask or FastAPI. The API should have one endpoint that accepts a piece of text (the ticket) and returns the predicted category as JSON.</li>
+                        <li>Deploy this Python API to a cloud service (like Render or PythonAnywhere) so it's accessible via a public URL.</li>
+                    </ul>
+                </li>
+                <li><strong>The n8n Workflow (The Brain):</strong>
+                    <ul>
+                        <li>Start with a Webhook trigger that receives new support tickets from a form or email.</li>
+                        <li>Use an "HTTP Request" node to send the ticket text to your live Python API endpoint.</li>
+                        <li>Receive the category prediction back from your API.</li>
+                        <li>Use an "IF" or "Switch" node to route the ticket based on the category. For example, if the category is "Billing Issue", create a new record in the "Billing" table in Airtable and notify the #billing channel in Slack. If "Technical Support", create a ticket in a Jira or Trello board.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-purple-800">Monetization Step:</h4>
+    <p class="text-sm text-purple-700">You are now operating at the intersection of no-code and AI. This is a rare and highly valuable skillset. You can now market yourself as an "AI & Automation Consultant". You can build systems that don't just move data but *make decisions* based on it. These projects are high-value, starting at **$7,000 - $15,000**. This milestone is proof you can deliver end-to-end intelligent automation.</p>
+    <p class="text-sm text-purple-700 mt-2 pt-2 border-t border-purple-200">
+        <strong>Business Strategy Source:</strong> <em>Master n8n AI Agents Build & Sell AI Agents</em>, Module 11 (Build and Sell n8n AI Agents).
+    </p>
+</div>
+        </div>
+    </div>
+      
+    <!-- PHASE 3 HEADING -->
+    <div class="my-10 text-center">
+        <h3 class="text-2xl font-bold text-green-600">Phase 3: AI Engineering & Specialization (Weeks 17-24+)</h3>
+        <p class="mt-1 text-slate-500">Your goal is to transition from an implementer to an architect. Build custom, intelligent systems and autonomous agents.</p>
+    </div>
+
+      <!-- Week 17 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 17 — Intro to LLMs & The Transformer Architecture</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Develop a strong theoretical understanding of what Large Language Models (LLMs) are, how they evolved, and the fundamental concepts behind the Transformer architecture that powers them.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Conceptual Understanding (LLMs, Transformers, Attention Mechanism, Embeddings).</p>
+          <p class="mt-1"><strong>Source Material:</strong> The AI Engineer Course 2025: Complete AI Engineer Bootcamp ▶   LLMs Module: Introduction to Large Language Models, The Transformer Architecture. ~40m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: What are LLMs?</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch all lectures in "Introduction to Large Language Models".</li>
+                      <li><strong>Hour 3-4:</strong> Write a one-page summary in your own words explaining what an LLM is, the concept of "pre-training" and "fine-tuning", and three real-world applications.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: The Transformer - High Level.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch the initial lectures in "The Transformer Architecture". Focus on understanding the problem it solved (handling long-range dependencies in text) compared to older models like RNNs.</li>
+                      <li><strong>Hour 3-4:</strong> Watch the YouTube video "Attention is All You Need" by Jay Alammar for a visual explanation.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Embeddings.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Focus on lectures about word embeddings and positional encodings.</li>
+                      <li><strong>Hour 3-4:</strong> Write a summary explaining why we need to turn words into numbers (vectors) and how positional encodings help the model understand word order.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: The Attention Mechanism.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> This is the core concept. Watch all lectures related to the "self-attention" mechanism.</li>
+                      <li><strong>Hour 3-4:</strong> In plain English, explain the concept of Query, Key, and Value in the context of self-attention. For the sentence "The cat sat on the mat," explain which words the model might "pay more attention to" when processing the word "sat".</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Encoder-Decoder & Synthesis.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Understand the role of the encoder (reading and understanding the input) and the decoder (generating the output).</li>
+                      <li><strong>Hour 3-4:</strong> Create a presentation (5-6 slides) or a detailed blog post explaining the entire Transformer architecture at a high level, using diagrams and your own explanations for each major component.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: Explainer Document & Presentation</h4>
+          <p class="mt-2"><strong>Goal:</strong> Consolidate your theoretical knowledge by creating a detailed document or presentation that explains the core concepts of LLMs and the Transformer architecture to a non-technical audience.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Section 1: What is an LLM?:</strong> Use analogies to explain how LLMs are trained to predict the next word.</li>
+            <li><strong>Section 2: The Magic of Embeddings:</strong> Explain why words need to be converted to numbers and how these numbers can capture meaning (e.g., the vectors for "king" and "queen" are similar).</li>
+            <li><strong>Section 3: The "Attention" Superpower:</strong> Create a simple diagram and use a sample sentence to explain how the attention mechanism allows the model to understand context by weighing the importance of different words.</li>
+            <li><strong>Section 4: How it Comes Together:</strong> A high-level diagram of the Encoder-Decoder structure, explaining how it processes input and generates output.</li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- Week 18 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 18 — Practical LLMs: Hugging Face & GPT Models</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Move from theory to practice. Learn to use the Hugging Face ecosystem to work with pre-trained models and master the `pipeline` function for common NLP tasks.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Python, Hugging Face `transformers` library, `pipeline` function, GPT models.</p>
+          <p class="mt-1"><strong>Source Material:</strong> The AI Engineer Course 2025: Complete AI Engineer Bootcamp ▶   LLMs Module: Getting Started With GPT Models, Hugging Face Transformers. ~1h</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Hugging Face Ecosystem.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on Hugging Face. Explore the Hugging Face Hub website, looking at different models and datasets.</li>
+                      <li><strong>Hour 3-4:</strong> Install the `transformers` library (`pip install transformers`). Set up a Python script and import the `pipeline`.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Sentiment Analysis Pipeline.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to initialize the `sentiment-analysis` pipeline.</li>
+                      <li><strong>Hour 3-4:</strong> Write a script that creates a sentiment analysis pipeline and uses it to classify a list of positive and negative sentences. Print the results.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Zero-Shot Classification.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn about the powerful `zero-shot-classification` pipeline, which lets you classify text into custom categories without any training.</li>
+                      <li><strong>Hour 3-4:</strong> Start the Weekly Project. Use the zero-shot pipeline to classify a list of email subjects into your custom categories ("Urgent", "Invoice", "Spam", "General").</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Text Generation & Summarization.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Experiment with the `text-generation` and `summarization` pipelines.</li>
+                      <li><strong>Hour 3-4:</strong> Write a script that takes a long paragraph of text and uses the summarization pipeline to generate a short, concise summary.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-3:</strong> Build the final Python script for the weekly project. Structure it into a clean function that takes a list of emails and returns a categorized dictionary.</li>
+                      <li><strong>Hour 4:</strong> Add comments to your code and test it with a variety of email subjects to ensure it works as expected.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "Smart Inbox" Classifier Script</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a Python script that simulates an intelligent email inbox by using a Hugging Face zero-shot classification model to automatically categorize incoming emails based on their subject lines.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Load the Pipeline:</strong> In your Python script, import and initialize the `zero-shot-classification` pipeline from the `transformers` library.</li>
+            <li><strong>Define Categories:</strong> Create a list of custom categories you want to sort emails into, for example: `['Urgent Business', 'Project Update', 'Invoice & Billing', 'Personal', 'Promotions']`.</li>
+            <li><strong>Simulate Emails:</strong> Create a list of 10-15 sample email subject lines. (e.g., "Invoice #12345 Due", "Quick question about the project deadline", "Your weekend plans", "Black Friday Sale Starts Now!").</li>
+            <li><strong>Classify Emails:</strong> Loop through your list of email subjects. For each subject, pass it to the classification pipeline along with your list of candidate labels (your categories).</li>
+            <li><strong>Display Results:</strong> Print each email subject along with the category that the model predicted for it with the highest confidence score.</li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- Week 19 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 19 — LangChain Fundamentals</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Master the foundational components of LangChain, the primary framework for building complex applications with LLMs. You will learn to connect to models, create prompts, and chain components together.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Python, LangChain, Models, Prompt Templates, Output Parsers, LCEL.</p>
+          <p class="mt-1"><strong>Source Material:</strong> The AI Engineer Course 2025: Complete AI Engineer Bootcamp ▶   LangChain Module: Introduction, Tokens/Models/Prices, Setting Up the Environment, The OpenAI API, Model Inputs. ~1h 30m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: LangChain Setup & Models.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on LangChain introduction and setup.</li>
+                      <li><strong>Hour 3-4:</strong> Install LangChain and the OpenAI integration (`pip install langchain langchain-openai`). Set up your OpenAI API key as an environment variable. Instantiate your first LLM model (`ChatOpenAI`) and invoke it with a simple question.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Prompt Templates.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn about `PromptTemplate` and `ChatPromptTemplate` for creating reusable, dynamic prompts.</li>
+                      <li><strong>Hour 3-4:</strong> Create a prompt template for the Weekly Project. It should take a `product` as input and format it into a prompt asking the AI to act as a marketer.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Output Parsers.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how Output Parsers can automatically convert the string output of an LLM into a more usable format like a list or JSON object.</li>
+                      <li><strong>Hour 3-4:</strong> Practice with `CommaSeparatedListOutputParser`. Create a chain that asks an LLM for a list of items and parses the output into a Python list.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: LangChain Expression Language (LCEL).</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> LCEL is the core of modern LangChain. Learn how to use the pipe `|` symbol to chain components together (prompt | model | parser).</li>
+                      <li><strong>Hour 3-4:</strong> Rebuild your previous chains using the LCEL syntax. Experience how much cleaner and more powerful it is.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-3:</strong> Build the final LangChain script for the weekly project, defining your prompt, model, and parser, and then chaining them together with LCEL.</li>
+                      <li><strong>Hour 4:</strong> Write a function that takes a product name as input and runs the entire chain to generate the social media post.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "Social Media Post Generator" Chain</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a simple but powerful LangChain script that generates a structured social media post for a given product.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Prompt Template:</strong> Create a `ChatPromptTemplate` that takes a variable `product`. The prompt should instruct the AI to act as a social media marketing expert and generate a post for the given product. It should ask for a "Catchy Hook", a "Main Body", and "3 relevant hashtags".</li>
+            <li><strong>Model:</strong> Instantiate the `ChatOpenAI` model.</li>
+            <li><strong>Output Parser:</strong> Use a `StrOutputParser` for simplicity, as you want the final text output. (For a bonus, try the `PydanticOutputParser` to get a structured JSON object back).</li>
+            <li><strong>Create the Chain with LCEL:</strong> Chain your components together using the pipe syntax: `chain = prompt | model | output_parser`.</li>
+            <li><strong>Invoke and Print:</strong> `invoke()` the chain with a product name (e.g., `{"product": "a new smart coffee mug"}`) and print the generated post to the console.</li>
+          </ol>
+        </div>
+      </details>
+
+      <!-- Week 20 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 20 — Building Memory with RAG (Retrieval-Augmented Generation)</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Build your first "smart" chatbot that can answer questions based on a specific document, not just its general knowledge. This is done using the RAG pattern.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> LangChain, RAG, Vector Stores (FAISS, Pinecone), Document Loaders, Text Splitters, Embeddings.</p>
+          <p class="mt-1"><strong>Source Material:</strong> `AI Automation Build LLM Apps & AI-Agents with n8n` - Module 05, supplemented with LangChain documentation. ~2h</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: RAG Theory & Document Loading.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 05 on RAG. Understand the process: Load -> Split -> Embed -> Store -> Retrieve -> Generate.</li>
+                      <li><strong>Hour 3-4:</strong> Install `pypdf` and `faiss-cpu`. Use LangChain's `PyPDFLoader` to load a PDF document into your Python script.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Text Splitting.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn why you need to split large documents into smaller chunks.</li>
+                      <li><strong>Hour 3-4:</strong> Use LangChain's `RecursiveCharacterTextSplitter` to break your loaded document into manageable chunks. Experiment with `chunk_size` and `chunk_overlap`.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Embeddings & Vector Stores.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Understand that embedding models turn your text chunks into vectors.</li>
+                      <li><strong>Hour 3-4:</strong> Use `OpenAIEmbeddings` to create embeddings for your text chunks and store them in a local `FAISS` vector store. Save the vector store to disk.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Retrieval.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to load your saved vector store and use it as a `retriever`.</li>
+                      <li><strong>Hour 3-4:</strong> Write a script that takes a user's question, uses the retriever's `invoke()` method to find the most relevant chunks from your document, and prints them.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Building the RAG Chain.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-3:</strong> Learn to use `create_stuff_documents_chain` to combine a prompt, your retriever, and an LLM into a complete question-answering chain.</li>
+                      <li><strong>Hour 4:</strong> Build and test your final project. Ask it questions that can only be answered by the content of the PDF you provided.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "DocuBot" - A PDF Question-Answering Bot</h4>
+          <p class="mt-2"><strong>Goal:</strong> Create a Python script that can "read" a PDF document and answer questions about its content.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Choose a Document:</strong> Find a text-heavy PDF document (e.g., a product manual, a research paper, or even a company's annual report).</li>
+            <li><strong>Ingestion Script:</strong> Write a script (`ingest.py`) that loads the PDF, splits it into chunks, creates OpenAI embeddings, and saves them into a local FAISS vector store file.</li>
+            <li><strong>Main Chat Script:</strong> Write a second script (`chat.py`) that:
+                <ul>
+                    <li>Loads the pre-built FAISS vector store from disk.</li>
+                    <li>Creates a retriever from the vector store.</li>
+                    <li>Creates a question-answering RAG chain using LangChain.</li>
+                    <li>Enters a `while` loop that continuously prompts the user for a question, feeds it to the chain, and prints the AI's answer.</li>
+                </ul>
+            </li>
+          </ol>
+        </div>
+      </details>
+
+<!-- ========== END OF PART 4 of 5 ========== -->
+
+
+<!-- ========== START OF PART 5 of 5 ========== -->
+
+      <!-- Week 21 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 21 — Vibe Coding & AI-Assisted Development</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Supercharge your development speed by learning "Vibe Coding"—the art of using AI-native code editors to translate high-level instructions into functional code.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> Cursor (AI Code Editor), Prompt-driven development, AI debugging.</p>
+          <p class="mt-1"><strong>Source Material:</strong> `Udemy - The Complete Vibe Coding for Non-coders Guide` - Modules 1-5. ~2h 15m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Intro to Vibe Coding & Cursor.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch modules on "Mastering Prompts for Vibe Coding" and "Using Cursor".</li>
+                      <li><strong>Hour 3-4:</strong> Install Cursor. Follow the tutorials to set it up with your OpenAI API key. Practice the basic commands: generating code from a prompt (Cmd/Ctrl+K) and editing code with chat (Cmd/Ctrl+L).</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Building a Simple App with Prompts.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Re-create the command-line Rock, Paper, Scissors game from Week 10, but this time, build it entirely within Cursor using only prompts. Start with a prompt like "Create a Python script for a command-line Rock, Paper, Scissors game." Then, refine it with follow-up prompts like "Add a score counter for the player and the computer" and "Wrap the game in a loop so the user can play again."</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: AI-Powered Debugging.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Intentionally introduce bugs into your previous scripts (e.g., a typo in a variable name, an incorrect logical condition).</li>
+                      <li><strong>Hour 3-4:</strong> Use Cursor's "Fix Linter Errors" and its chat functionality to identify and fix the bugs. Simply select the buggy code and ask the AI, "What's wrong with this code?" or "Fix this bug."</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Refactoring and Documentation.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Take a complex script you've written (like the news classifier from Week 16).</li>
+                      <li><strong>Hour 3-4:</strong> Use Cursor's chat to refactor it. Select a large block of code and prompt, "Turn this into a reusable function." Then, select the entire file and prompt, "Add docstrings and comments to explain this code."</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Build this week's project from scratch inside Cursor. Focus on starting with a high-level prompt and iteratively refining the application by "chatting" with your codebase.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: Flask API for your News Classifier</h4>
+          <p class="mt-2"><strong>Goal:</strong> Take the "News Article Classifier" script from Week 16 and, using only Vibe Coding techniques in Cursor, wrap it in a simple Flask web API.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Initial Prompt:</strong> In a new Python file within Cursor, use a prompt like: "Create a simple Flask API. It should have one POST endpoint called `/predict`. Also, load the pre-trained Scikit-learn model and vectorizer from the files `model.pkl` and `vectorizer.pkl`." (You will need to first save your trained model from Week 16).</li>
+            <li><strong>Refine the Endpoint:</strong> Use chat to refine the `/predict` endpoint. Prompt: "The endpoint should expect a JSON payload with a key 'text'. It should take this text, use the loaded vectorizer and model to make a prediction, and return the prediction as a JSON response."</li>
+            <li><strong>Add Error Handling:</strong> Prompt the AI: "Add error handling to the endpoint. If the 'text' key is missing, return a 400 error with a message."</li>
+            <li><strong>Generate Requirements:</strong> Ask Cursor: "Create a `requirements.txt` file for this Flask application."</li>
+          </ol>
+        </div>
+      </details>
+      
+      <!-- Week 22 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 22 — Building AI Agents with Tools</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Elevate from simple chains to building AI "agents" that can think, reason, and decide which tools to use to accomplish a task.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> LangChain Agents, Tools, ReAct Framework (conceptual), LangSmith.</p>
+          <p class="mt-1"><strong>Source Material:</strong> `Udemy - MCP Build Agents with Claude, Cursor, Flowise, Python & n8n`, supplemented with LangChain documentation on agents. ~1h 50m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Agent Theory.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch lectures on what an agent is. Understand the core loop: the LLM receives a prompt, "thinks" about which tool to use, uses the tool, observes the result, and repeats until the task is done (the ReAct framework).</li>
+                      <li><strong>Hour 3-4:</strong> Set up LangSmith for debugging. Create an account and configure your environment variables. This is crucial for seeing the agent's "thoughts".</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Using Pre-built Tools.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn to use LangChain's pre-built tools, like the one for Tavily Search.</li>
+                      <li><strong>Hour 3-4:</strong> Create a simple agent that has access to the search tool. Ask it questions that it can't know from its training data, like "What is the weather in NYC today?" or "Who won the F1 race yesterday?". Observe its reasoning in LangSmith.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Creating Custom Tools.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to turn any Python function into a tool the agent can use with the `@tool` decorator.</li>
+                      <li><strong>Hour 3-4:</strong> Create a custom tool `get_word_length(word: str) -> int` that returns the length of a word. Give this tool to an agent and ask it, "How many letters are in the word 'onomatopoeia'?"</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Combining Tools.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> An agent's power comes from having multiple tools.</li>
+                      <li><strong>Hour 3-4:</strong> Build an agent that has access to both a search tool and a custom calculator tool (that can add, subtract, etc.). Give it a complex query like, "What is the age of the current US president raised to the power of 2?"</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Build the weekly project. Focus on creating robust custom tools and writing good descriptions for them, as this is how the agent knows what each tool does.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "File System Explorer" Agent</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a Python-based AI agent that can interact with your local file system to answer questions about files and folders.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>Create Custom Tools:</strong> Using Python's `os` or `pathlib` library, create three custom LangChain tools:
+                <ul>
+                    <li>`list_files(directory: str) -> list[str]`: Lists all files and folders in a given directory.</li>
+                    <li>`read_file(file_path: str) -> str`: Reads the content of a text file.</li>
+                    <li>`get_file_size(file_path: str) -> int`: Returns the size of a file in bytes.</li>
+                </ul>
+                **Important:** Add clear docstrings to each function, as the agent uses these to understand what the tool does.
+            </li>
+            <li><strong>Initialize the Agent:</strong> Create an agent using a modern agent creation function from LangChain and give it your list of custom tools.</li>
+            <li><strong>Invoke with Questions:</strong> Interact with your agent by asking it questions about your local project folder, such as: "What files are in the current directory?", "Read the content of requirements.txt", or "Which file is bigger, ingest.py or chat.py?"</li>
+            <li><strong>Observe in LangSmith:</strong> Watch the agent's decision-making process in LangSmith. See it choose a tool (e.g., `list_files`), execute it, observe the output, and then use that output to answer your question.</li>
+          </ol>
+        </div>
+      </details>
+      
+      <!-- Week 23 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 23 — Advanced Agents & Model Context Protocol (MCP)</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Explore the cutting edge of AI development by understanding the Model Context Protocol (MCP) and building agents that can interact with external, standardized tool servers.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> MCP (conceptual), n8n (as an MCP server), Claude Desktop/Cursor (as MCP clients).</p>
+          <p class="mt-1"><strong>Source Material:</strong> `Udemy - MCP Build Agents with Claude, Cursor, Flowise, Python & n8n` - Modules 1-4. ~5h 40m</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: MCP Theory & Setup.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 1 lectures on what MCP is. Understand the client/server model for AI tools.</li>
+                      <li><strong>Hour 3-4:</strong> Follow Module 2 to install Claude Desktop and the MCP installer. Explore the existing public MCP servers.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Creating an MCP Server in n8n.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Watch Module 4 videos on creating an MCP server in n8n.</li>
+                      <li><strong>Hour 3-4:</strong> Create a new n8n workflow. Use the "MCP Trigger" node. Add a simple tool, like a "Code" node that returns the current time. Deploy this workflow to a public URL using n8n's tunneling feature.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Connecting a Client.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Learn how to add your custom n8n MCP server to your Claude Desktop client.</li>
+                      <li><strong>Hour 3-4:</strong> In Claude Desktop, activate your server. Ask the model a question that requires your tool, like "What is the current time according to your tool?" and watch it successfully call your n8n workflow.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Adding More Powerful Tools.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Enhance your n8n MCP server. Add tools that can interact with other nodes. For example, create a tool called `add_idea_to_airtable` that takes a string of text and uses the Airtable node to add it to a "Brainstorming" base.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Project Completion.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Build and test the full weekly project. Ensure you can use natural language in your MCP client (Claude or Cursor) to trigger the workflow, which then creates a Trello card.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Weekly Project: "Task Master" MCP Server</h4>
+          <p class="mt-2"><strong>Goal:</strong> Build a personal assistant MCP server using n8n that allows you to manage a Trello board using natural language from an MCP client like Claude Desktop or Cursor.</p>
+          <ol class="list-decimal list-inside text-slate-700 space-y-1 mt-1">
+            <li><strong>n8n Workflow Setup:</strong> Create an n8n workflow with an "MCP Trigger" node.</li>
+            <li><strong>Define Tools in the MCP Trigger:</strong> In the trigger node's UI, define two tools:
+                <ul>
+                    <li>`create_todo_card(content: str)`: This tool will be used to create a new card in your "To-Do" list on Trello.</li>
+                    <li>`move_card_to_done(card_name: str)`: This tool will find a card by its name and move it to the "Done" list.</li>
+                </ul>
+            </li>
+            <li><strong>Build the Tool Logic:</strong> Use a "Switch" node connected to the MCP trigger to route based on which tool was called. Connect the Trello "Create" and "Update" nodes to the Switch node to implement the actual logic for each tool.</li>
+            <li><strong>Deploy and Connect:</strong> Deploy the workflow via a tunnel URL and connect it to your MCP client.</li>
+            <li><strong>Interact:</strong> In your client, give commands like: "Using my Task Master tool, create a new to-do card to 'Finish the weekly roadmap project'" and "Use your tool to move the card 'Finish the weekly roadmap project' to the done list."</li>
+          </ol>
+        </div>
+      </details>
+      
+      <!-- Week 24 -->
+      <details class="bg-white rounded-xl p-6 border card-hover shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="font-semibold text-lg text-slate-800">Week 24 — Capstone Project & Career Prep</span>
+          <i class="chev fa-solid fa-chevron-down text-slate-400"></i>
+        </summary>
+        <div class="mt-4 pt-4 border-t">
+          <p><strong>Weekly Goal:</strong> Synthesize all the skills you've learned—no-code, automation, Python, NLP, and AI agents—into a single, impressive capstone project. Prepare your portfolio and resume for job applications.</p>
+          <p class="mt-1"><strong>Tools/Skills:</strong> All tools learned previously.</p>
+          <p class="mt-1"><strong>Source Material:</strong> All previous course materials.</p>
+          <h4 class="font-semibold mt-4">Daily Breakdown (4 hours/day):</h4>
+          <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+              <li><strong>Day 1: Project Scoping & Architecture.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Plan your Month 6 Milestone Project. Draw out the architecture. Which parts will be in Bubble? Which in n8n? What custom Python/LangChain code is needed? Create a project plan in Notion.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 2: Building the No-Code Front-End.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Build the user interface and database structure for your capstone project in Bubble.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 3: Developing the AI Backend.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Write the core LangChain agent logic in Python. Create the custom tools your agent will need.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 4: Integration & Testing.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-4:</strong> Connect your Bubble front-end to your AI backend using the Bubble API connector and an n8n workflow as middleware. Test the end-to-end flow rigorously.</li>
+                  </ul>
+              </li>
+              <li><strong>Day 5: Portfolio & Resume.</strong>
+                  <ul class="list-inside pl-5 text-sm">
+                      <li><strong>Hour 1-2:</strong> Write a detailed case study for your capstone project to add to your portfolio.</li>
+                      <li><strong>Hour 3-4:</strong> Update your resume and LinkedIn profile with your new title: "AI & Automation Developer". List your key skills (Python, LangChain, n8n, Bubble) and your top 3 portfolio projects. Start applying for roles.</li>
+                  </ul>
+              </li>
+          </ul>
+          <h4 class="font-semibold mt-4">Project: Month 6 Milestone (See Below)</h4>
+          <p class="mt-2">This week is dedicated to building the final milestone project, which serves as the ultimate demonstration of your hybrid skillset.</p>
+        </div>
+      </details>
+      
+    <!-- MONTH 5 & 6 MILESTONE -->
+    <div class="mt-10 pt-8 border-t-2 border-dashed border-primary">
+        <div class="bg-white rounded-xl p-6 border-2 border-primary shadow-lg">
+            <h3 class="text-xl font-bold text-primary"><i class="fa-solid fa-crown"></i> Month 5 & 6 Capstone Project: "NexusLeads" - Autonomous Lead Research Agent</h3>
+            <p class="mt-2 text-slate-600">This is the final, cumulative project that combines all your skills into a commercially viable product. "NexusLeads" is a SaaS platform where a user can input a company domain, and an AI agent autonomously researches the company, scrapes its website, identifies key personnel, and generates a personalized outreach email.</p>
+            <h4 class="font-semibold mt-4">Project Architecture:</h4>
+            <ul class="list-disc list-inside text-slate-700 space-y-2 mt-2">
+                <li><strong>The Bubble Front-End:</strong>
+                    <ul>
+                        <li>User accounts and a credit system (e.g., each user gets 5 free reports).</li>
+                        <li>A simple dashboard where a user can submit a company domain (e.g., `google.com`).</li>
+                        <li>A results page where the user can view the generated report: Company Summary, Key Personnel, and a personalized email draft.</li>
+                    </ul>
+                </li>
+                <li><strong>The LangChain Agent (Python Backend):</strong>
+                    <ul>
+                        <li>This is the core of the project. It's a LangChain agent with several custom tools.</li>
+                        <li><strong>Tool 1: Website Scraper.</strong> A tool that takes a URL and returns the text content of the homepage.</li>
+                        <li><strong>Tool 2: Web Search.</strong> A tool that uses Tavily or another search API to find recent news about the company.</li>
+                        <li><strong>Tool 3: LinkedIn Finder.</strong> A tool that constructs a Google search query to find the LinkedIn profile of the CEO or Head of Sales for the company.</li>
+                        <li>The agent's main prompt will be: "Given the domain `[domain]`, your goal is to produce a report. First, scrape the homepage to understand the company. Second, search for recent news. Third, find the Head of Sales. Finally, synthesize all this information to write a personalized 100-word outreach email."</li>
+                    </ul>
+                </li>
+                <li><strong>The n8n Middleware:</strong>
+                    <ul>
+                        <li>A webhook that receives the domain from the Bubble front-end.</li>
+                        <li>An "Execute Command" node to run the Python LangChain agent script.</li>
+                        <li>A node to receive the final report from the agent.</li>
+                        <li>A Bubble "Create a new thing" node to save the final report back into the user's account in the Bubble database.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="mt-4 bg-purple-50 p-4 rounded-lg">
+    <h4 class="font-semibold text-purple-800">Monetization & Career Next Steps:</h4>
+    <p class="text-sm text-purple-700">With this project in your portfolio, you are no longer just a developer; you are a solution architect. You can apply for roles like "AI Engineer," "Automation Architect," or "Founding Engineer" at startups. You can confidently pitch high-ticket freelance projects (**$15,000 - $30,000+**) to build custom autonomous agents for businesses. The ultimate step is to take this project, refine it, and launch it as your own Micro-SaaS startup.</p>
+    <p class="text-sm text-purple-700 mt-2 pt-2 border-t border-purple-200">
+        <strong>Business Strategy Source:</strong> <em>Master n8n AI Agents Build & Sell AI Agents</em>, Modules 2 (Lead Gen), 3 (Sales & Outreach), and 4 (Research & Intelligence).
+    </p>
+</div>
+        </div>
+    </div>
+      
+    </div>
+</section>
+
+<!-- MONETIZATION & SCALING SECTIONS -->
+<section id="monetization" class="py-12 bg-slate-50 border-t border-slate-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold">Monetization & Career Path</h2>
+            <p class="mt-2 text-slate-600">A step-by-step guide to turning your new skills into income and a career.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl p-6 border shadow-sm">
+                <h3 class="font-semibold">Phase 1: Freelancing (Months 1-3)</h3>
+                <p class="mt-2 text-sm text-slate-700"><strong>Roles:</strong> Webflow Developer, No-Code Builder</p>
+                <ul class="mt-3 text-sm text-slate-600 space-y-1">
+                    <li><strong>Where:</strong> Upwork, Fiverr, Toptal, reaching out to local businesses.</li>
+                    <li><strong>Offerings:</strong> Landing pages ($500+), multi-page websites ($1,500+), basic automations ($250+).</li>
+                    <li><strong>Remote Friendliness:</strong> 95% - Ideal for remote work.</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-xl p-6 border shadow-sm">
+                <h3 class="font-semibold">Phase 2: High-Value Contractor (Months 4-6)</h3>
+                <p class="mt-2 text-sm text-slate-700"><strong>Roles:</strong> Bubble Developer, Automation Specialist</p>
+                <ul class="mt-3 text-sm text-slate-600 space-y-1">
+                    <li><strong>Where:</strong> LinkedIn, niche job boards (e.g., No-Code Founders), referrals.</li>
+                    <li><strong>Offerings:</strong> MVP builds ($5,000 - $15,000), complex automation projects ($2,000+), AI feature integration ($1,000+).</li>
+                    <li><strong>Remote Friendliness:</strong> 90% - Mostly remote, occasional meetings may be required.</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-xl p-6 border shadow-sm">
+                <h3 class="font-semibold">Phase 3: Full-Time Roles & Startups (Months 7+)</h3>
+                <p class="mt-2 text-sm text-slate-700"><strong>Roles:</strong> AI Engineer, Product Builder, Technical Founder</p>
+                <ul class="mt-3 text-sm text-slate-600 space-y-1">
+                    <li><strong>Where:</strong> Startups, tech companies, AI agencies, or founding your own venture.</li>
+                    <li><strong>Offerings:</strong> Full-time employment ($90k - $180k+), building and selling your own SaaS product.</li>
+                    <li><strong>Remote Friendliness:</strong> 80% - Many remote roles available, especially in startups.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="scaling" class="py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold">Scaling Your Career</h2>
+      <p class="mt-2 text-slate-600">Move from freelancer to business owner and expert.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-xl p-6 border shadow-sm">
+        <h4 class="font-semibold">Business Scaling</h4>
+        <ul class="mt-3 text-sm text-slate-700 space-y-2">
+          <li><strong>Productize Your Services:</strong> Instead of custom quotes, sell fixed-price packages (e.g., "AI Chatbot Setup: $2,000"). This simplifies sales and delivery.</li>
+          <li><strong>Build a Niche Reputation:</strong> Become the go-to expert for a specific industry (e.g., "AI automation for law firms"). This allows you to charge premium rates.</li>
+          <li><strong>Create Retainer Offers:</strong> Sell ongoing "Automation Maintenance" or "AI Strategy" retainers for predictable, recurring monthly revenue ($500 - $5,000/mo).</li>
+          <li><strong>Build & Sell Templates:</strong> Create high-quality Webflow, Bubble, or n8n templates and sell them on marketplaces for passive income.</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-xl p-6 border shadow-sm">
+        <h4 class="font-semibold">Technical Scaling</h4>
+        <ul class="mt-3 text-sm text-slate-700 space-y-2">
+          <li><strong>Master One Stack Deeply:</strong> While this roadmap is broad, true expertise comes from deep knowledge. Choose to specialize in either the Bubble or advanced AI agent stack.</li>
+          <li><strong>Contribute to Open Source:</strong> If you become proficient in Python, contributing to libraries like LangChain can rapidly build your reputation.</li>
+          <li><strong>Build a Micro-SaaS:</strong> Apply all your skills to solve a single, painful problem. Build an MVP in Bubble, automate it with n8n and AI, and launch it. This is the ultimate path to uncapped income and freedom.</li>
+          <li><strong>Specialize in a High-Demand AI Field:</strong> Focus on areas like AI-driven security, ethical AI consulting, or building specialized financial models.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-100 bg-white">
+<div class="max-w-6xl mx-auto px-6 py-6 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between">
+<div>© <span id="year"></span> Hybrid Roadmap. All rights reserved.</div>
+<div class="flex gap-4 mt-3 md:mt-0">
+<a href="#" class="text-slate-500 hover:text-primary"><i class="fa-brands fa-github"></i></a>
+<a href="#" class="text-slate-500 hover:text-primary"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#" class="text-slate-500 hover:text-primary"><i class="fa-solid fa-envelope"></i></a>
+</div>
+</div>
+</footer>
+<!-- Scripts: Smooth scroll, mobile menu toggle, nav highlight, collapse details -->
+<script>
+// Year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const header = document.getElementById('header');
+const mobileBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileBtn.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+if (!mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('slide-down');
+}
+});
+
+// Smooth scrolling with header offset
+function scrollToSection(targetId) {
+const target = document.getElementById(targetId);
+if (!target) return;
+const headerHeight = header.offsetHeight + 8;
+const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+window.scrollTo({ top: y, behavior: 'smooth' });
+}
+
+document.querySelectorAll('a.nav-link').forEach(link => {
+link.addEventListener('click', function (e) {
+e.preventDefault();
+const href = this.getAttribute('href') || '';
+const id = href.replace('#', '');
+scrollToSection(id);
+// close mobile menu
+if (!mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+
+// Active nav item using IntersectionObserver
+const sections = document.querySelectorAll('main section[id], footer');
+const navLinks = document.querySelectorAll('a.nav-link');
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+const id = entry.target.getAttribute('id');
+if (entry.isIntersecting) {
+navLinks.forEach(n => n.classList.toggle('nav-active', n.getAttribute('href') === '#' + id));
+}
+})
+}, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
+
+sections.forEach(section => observer.observe(section));
+
+// Details element scroll-on-open logic
+document.querySelectorAll('details').forEach((det) => {
+det.addEventListener('toggle', (event) => {
+    // Only scroll if the user manually opened it, not on programmatic changes
+    if (det.open && event.isTrusted) {
+        setTimeout(() => {
+            const headerHeight = header.offsetHeight + 12;
+            const top = det.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            window.scrollTo({ top, behavior: 'smooth' });
+        }, 60);
+    }
+});
+});
+
+// *** NEW: Collapse All button logic ***
+const collapseBtn = document.getElementById('collapse-all-btn');
+if (collapseBtn) {
+    collapseBtn.addEventListener('click', () => {
+        const allDetails = document.querySelectorAll('#roadmap details');
+        allDetails.forEach(detail => {
+            detail.open = false;
+        });
+    });
+}
+
+// collapse mobile menu on outside click
+document.addEventListener('click', (e) => {
+if (!mobileMenu.contains(e.target) && !mobileBtn.contains(e.target) && window.innerWidth < 768) {
+mobileMenu.classList.add('hidden');
+}
+});
+</script>
+</body>
+</html>
+
+<!-- ========== END OF PART 5 of 5 ========== -->
+
+
+
+
+
