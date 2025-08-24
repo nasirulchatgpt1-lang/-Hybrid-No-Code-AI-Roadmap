@@ -2496,33 +2496,35 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const header = document.getElementById('header');
 const mobileBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
+let isProgrammaticToggle = false; // Flag to prevent scroll on bulk toggle
+
 mobileBtn.addEventListener('click', () => {
-mobileMenu.classList.toggle('hidden');
-if (!mobileMenu.classList.contains('hidden')) {
-mobileMenu.classList.add('slide-down');
-}
+    mobileMenu.classList.toggle('hidden');
+    if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('slide-down');
+    }
 });
 
 // Smooth scrolling with header offset
 function scrollToSection(targetId) {
-const target = document.getElementById(targetId);
-if (!target) return;
-const headerHeight = header.offsetHeight + 8;
-const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-window.scrollTo({ top: y, behavior: 'smooth' });
+    const target = document.getElementById(targetId);
+    if (!target) return;
+    const headerHeight = header.offsetHeight + 8;
+    const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+    window.scrollTo({ top: y, behavior: 'smooth' });
 }
 
 document.querySelectorAll('a.nav-link').forEach(link => {
-link.addEventListener('click', function (e) {
-e.preventDefault();
-const href = this.getAttribute('href') || '';
-const id = href.replace('#', '');
-scrollToSection(id);
-// close mobile menu
-if (!mobileMenu.classList.contains('hidden')) {
-mobileMenu.classList.add('hidden');
-}
-});
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const href = this.getAttribute('href') || '';
+        const id = href.replace('#', '');
+        scrollToSection(id);
+        // close mobile menu
+        if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
 });
 
 // Active nav item using IntersectionObserver
@@ -2530,48 +2532,50 @@ const sections = document.querySelectorAll('main section[id], footer');
 const navLinks = document.querySelectorAll('a.nav-link');
 
 const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-const id = entry.target.getAttribute('id');
-if (entry.isIntersecting) {
-navLinks.forEach(n => n.classList.toggle('nav-active', n.getAttribute('href') === '#' + id));
-}
-})
+    entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        if (entry.isIntersecting) {
+            navLinks.forEach(n => n.classList.toggle('nav-active', n.getAttribute('href') === '#' + id));
+        }
+    })
 }, { rootMargin: '-40% 0px -40% 0px', threshold: 0 });
 
 sections.forEach(section => observer.observe(section));
 
-// Details element scroll-on-open logic
+// Details element scroll-on-open logic (NOW WITH A FLAG CHECK)
 document.querySelectorAll('details').forEach((det) => {
-det.addEventListener('toggle', (event) => {
-    // Only scroll if the user manually opened it, not on programmatic changes
-    if (det.open && event.isTrusted) {
-        setTimeout(() => {
-            const headerHeight = header.offsetHeight + 12;
-            const top = det.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-            window.scrollTo({ top, behavior: 'smooth' });
-        }, 60);
-    }
-});
+    det.addEventListener('toggle', (event) => {
+        // ONLY scroll if the details was opened AND it was NOT part of a bulk toggle
+        if (det.open && !isProgrammaticToggle) {
+            setTimeout(() => {
+                const headerHeight = header.offsetHeight + 12;
+                const top = det.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }, 60); // Timeout allows the element to fully render open
+        }
+    });
 });
 
-// *** NEW: Expand/Collapse All toggle logic ***
+// Expand/Collapse All toggle logic (NOW WITH A FLAG)
 const toggleBtn = document.getElementById('toggle-details-btn');
 if (toggleBtn) {
     const toggleText = document.getElementById('toggle-details-text');
     const toggleIcon = toggleBtn.querySelector('i');
     const allDetails = document.querySelectorAll('#roadmap details');
 
-    // Set initial state on page load
+    // Set initial state
     toggleText.textContent = 'Expand All';
     toggleIcon.classList.remove('fa-compress');
     toggleIcon.classList.add('fa-expand');
 
     toggleBtn.addEventListener('click', () => {
-        // Check if ALL details sections are currently open
+        // Set the flag to true before we make changes
+        isProgrammaticToggle = true;
+
         const allAreOpen = document.querySelectorAll('#roadmap details[open]').length === allDetails.length;
 
         if (allAreOpen) {
-            // If all are open, the action is to COLLAPSE them
+            // Action is to COLLAPSE
             allDetails.forEach(detail => {
                 detail.open = false;
             });
@@ -2579,7 +2583,7 @@ if (toggleBtn) {
             toggleIcon.classList.remove('fa-compress');
             toggleIcon.classList.add('fa-expand');
         } else {
-            // Otherwise (if even one is closed), the action is to EXPAND them all
+            // Action is to EXPAND
             allDetails.forEach(detail => {
                 detail.open = true;
             });
@@ -2587,20 +2591,27 @@ if (toggleBtn) {
             toggleIcon.classList.remove('fa-expand');
             toggleIcon.classList.add('fa-compress');
         }
+
+        // IMPORTANT: Unset the flag after our programmatic changes are done
+        // We use a brief timeout to ensure this runs after all 'toggle' events have fired
+        setTimeout(() => {
+            isProgrammaticToggle = false;
+        }, 100);
     });
 }
 
 // collapse mobile menu on outside click
 document.addEventListener('click', (e) => {
-if (!mobileMenu.contains(e.target) && !mobileBtn.contains(e.target) && window.innerWidth < 768) {
-mobileMenu.classList.add('hidden');
-}
+    if (!mobileMenu.contains(e.target) && !mobileBtn.contains(e.target) && window.innerWidth < 768) {
+        mobileMenu.classList.add('hidden');
+    }
 });
 </script>
 </body>
 </html>
 
 <!-- ========== END OF PART 5 of 5 ========== -->
+
 
 
 
