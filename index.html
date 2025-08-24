@@ -380,10 +380,10 @@ details[open] .chev { transform: rotate(180deg); }
       <p class="mt-2 text-slate-600 max-w-3xl mx-auto">Follow this granular, hour-by-hour plan to build skills methodically. Each week is a 20-hour sprint (5 days, 4 hours/day).</p>
     </div>
 	
-	<!-- Collapse All Button -->
+	<!-- Expand/Collapse All Button -->
 <div class="mb-4 text-right">
-    <button id="collapse-all-btn" class="px-4 py-2 text-sm font-semibold text-slate-600 bg-white border rounded-lg shadow-sm hover:bg-slate-50 hover:text-primary">
-        <i class="fa-solid fa-compress mr-2"></i>Collapse All
+    <button id="toggle-details-btn" class="px-4 py-2 text-sm font-semibold text-slate-600 bg-white border rounded-lg shadow-sm hover:bg-slate-50 hover:text-primary">
+        <i class="fa-solid fa-expand mr-2"></i><span id="toggle-details-text">Expand All</span>
     </button>
 </div>
 
@@ -2554,14 +2554,39 @@ det.addEventListener('toggle', (event) => {
 });
 });
 
-// *** NEW: Collapse All button logic ***
-const collapseBtn = document.getElementById('collapse-all-btn');
-if (collapseBtn) {
-    collapseBtn.addEventListener('click', () => {
-        const allDetails = document.querySelectorAll('#roadmap details');
-        allDetails.forEach(detail => {
-            detail.open = false;
-        });
+// *** NEW: Expand/Collapse All toggle logic ***
+const toggleBtn = document.getElementById('toggle-details-btn');
+if (toggleBtn) {
+    const toggleText = document.getElementById('toggle-details-text');
+    const toggleIcon = toggleBtn.querySelector('i');
+    const allDetails = document.querySelectorAll('#roadmap details');
+
+    // Set initial state on page load
+    toggleText.textContent = 'Expand All';
+    toggleIcon.classList.remove('fa-compress');
+    toggleIcon.classList.add('fa-expand');
+
+    toggleBtn.addEventListener('click', () => {
+        // Check if ALL details sections are currently open
+        const allAreOpen = document.querySelectorAll('#roadmap details[open]').length === allDetails.length;
+
+        if (allAreOpen) {
+            // If all are open, the action is to COLLAPSE them
+            allDetails.forEach(detail => {
+                detail.open = false;
+            });
+            toggleText.textContent = 'Expand All';
+            toggleIcon.classList.remove('fa-compress');
+            toggleIcon.classList.add('fa-expand');
+        } else {
+            // Otherwise (if even one is closed), the action is to EXPAND them all
+            allDetails.forEach(detail => {
+                detail.open = true;
+            });
+            toggleText.textContent = 'Collapse All';
+            toggleIcon.classList.remove('fa-expand');
+            toggleIcon.classList.add('fa-compress');
+        }
     });
 }
 
@@ -2576,6 +2601,7 @@ mobileMenu.classList.add('hidden');
 </html>
 
 <!-- ========== END OF PART 5 of 5 ========== -->
+
 
 
 
